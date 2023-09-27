@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b38b7a4-a7df-4d40-ae96-5e554cfd6dce" name="Changes" comment="Add react-lazy-load-image-component">
+      <change afterPath="$PROJECT_DIR$/public/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/landing-page-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/title.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/landing-title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/landing-title.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="init" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2VeihxSopedi8YgtfFxmX77Cq8b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.18.0",
+    "javascript.nodejs.core.library.typings.version": "18.18.0",
+    "last_opened_file_path": "/home/alex/code/wct-fe/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/alex/.nvm/versions/node/v18.18.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "ts.external.directory.path": "/home/alex/code/tmp/zone-next-js/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/sections" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sections" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/sections/landing-title.tsx" />
+      <recent name="$PROJECT_DIR$/src/sections/view/landing-view.tsx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.wct-fe">
+    <configuration name="wct-fe" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="zone-next-js" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/../tmp/zone-next-js/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.wct-fe" />
+      <item itemvalue="npm.zone-next-js" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b38b7a4-a7df-4d40-ae96-5e554cfd6dce" name="Changes" comment="" />
+      <created>1695203069860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695203069860</updated>
+      <workItem from="1695203070869" duration="7414000" />
+      <workItem from="1695370035196" duration="1798000" />
+      <workItem from="1695654814658" duration="904000" />
+      <workItem from="1695758612140" duration="9901000" />
+      <workItem from="1695799448388" duration="1044000" />
+      <workItem from="1695800514136" duration="6000" />
+      <workItem from="1695800567225" duration="4041000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update home page to landing page template">
+      <option name="closed" value="true" />
+      <created>1695204497523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695204497523</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cleanup RootLayout">
+      <option name="closed" value="true" />
+      <created>1695205092557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695205092557</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create image with a background">
+      <option name="closed" value="true" />
+      <created>1695760738820</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695760738820</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Extract LandingView from LandingPage">
+      <option name="closed" value="true" />
+      <created>1695760822283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695760822283</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Move LandingView to sections/view/landing-view.tsx">
+      <option name="closed" value="true" />
+      <created>1695761327224</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695761327224</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Extract LandingTitle from LandingView">
+      <option name="closed" value="true" />
+      <created>1695761871515</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695761871515</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Extract LandingTitle from LandingView">
+      <option name="closed" value="true" />
+      <created>1695762044693</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695762044693</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add landing-title-legacy.tsx">
+      <option name="closed" value="true" />
+      <created>1695762143352</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695762143352</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Make landing page title layout">
+      <option name="closed" value="true" />
+      <created>1695764849671</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695764849671</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add components/image">
+      <option name="closed" value="true" />
+      <created>1695799030740</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695799030740</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add react-lazy-load-image-component">
+      <option name="closed" value="true" />
+      <created>1695801414482</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695801414482</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update home page to landing page template" />
+    <MESSAGE value="Cleanup RootLayout" />
+    <MESSAGE value="Create image with a background" />
+    <MESSAGE value="Extract LandingView from LandingPage" />
+    <MESSAGE value="Move LandingView to sections/view/landing-view.tsx" />
+    <MESSAGE value="Extract LandingTitle from LandingView" />
+    <MESSAGE value="Add landing-title-legacy.tsx" />
+    <MESSAGE value="Make landing page title layout" />
+    <MESSAGE value="Add components/image" />
+    <MESSAGE value="Add react-lazy-load-image-component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add react-lazy-load-image-component" />
+  </component>
+</project>
