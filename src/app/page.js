@@ -1,7 +1,4 @@
-import MainLayout from 'src/layouts/main';
-import HomeView from 'src/sections/_home/view/home-view';
-
-// ----------------------------------------------------------------------
+import LandingView from "../sections/landing/landing-view";
 
 export const metadata = {
   title: 'The starting point for your next project',
@@ -9,8 +6,6 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <MainLayout>
-      <HomeView />
-    </MainLayout>
+    <LandingView/>
   );
 }
