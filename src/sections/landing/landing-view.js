@@ -2,6 +2,7 @@
 
 
 import LandingTitle from "./landing-title";
+import LandingBenefits from "./landing-benefits";
 import LandingStatistics from "./landing-statistics";
 
 export default function LandingView() {
@@ -9,6 +10,7 @@ export default function LandingView() {
     <>
       <LandingTitle/>
       <LandingStatistics/>
+      <LandingBenefits/>
     </>
   );
 }
