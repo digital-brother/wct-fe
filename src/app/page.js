@@ -1,7 +1,7 @@
 import LandingView from "../sections/landing/landing-view";
 
 export const metadata = {
-  title: 'The starting point for your next project',
+  title: 'WCT',
 };
 
 export default function HomePage() {
