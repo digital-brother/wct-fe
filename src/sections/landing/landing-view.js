@@ -8,6 +8,7 @@ import LandingHowItWorks from "./landing-how-it-works";
 import LandingCertifications from "./landing-certifications";
 import LandingPremiumQuality from "./landing-premium-quality";
 import LandingTestimonial from "./landing-testimonial";
+import LandingCTA from "./landing-cta";
 
 export default function LandingView() {
   return (
@@ -19,6 +20,7 @@ export default function LandingView() {
       <LandingPremiumQuality/>
       <LandingCertifications/>
       <LandingTestimonial/>
+      <LandingCTA/>
     </>
   );
 }
