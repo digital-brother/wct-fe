@@ -38,7 +38,7 @@ export default function LandingPremiumQuality() {
       sx={{
         textAlign: 'center',
         pt: { xs: 5, md: 10 },
-        pb: { xs: 10, md: 15 },
+        pb: { xs: 5, md: 10 },
       }}
     >
       <Typography variant="h2">Premium Quality </Typography>
