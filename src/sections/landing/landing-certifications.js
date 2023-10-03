@@ -46,23 +46,26 @@ export default function LandingCertifications({brands}) {
         pb: {xs: 10, md: 15},
       }}
     >
-      <Typography variant="h2" sx={{mb: {xs: 5, md: 10}}}>Certifications</Typography>
-      <Grid container spacing={3} sx={{border: '1px solid black'}}>
+      <Typography variant="h2" sx={{mb: {xs: 3, md: 5}}}>Certifications</Typography>
+
+      <Grid container spacing={3}>
         {CERTIFICATIONS.map((certification) => (
-          <Grid item xs={3} sx={{border: '1px solid black'}}>
-            <Box height={100} sx={{border: '1px solid black'}}>
-              <Image
-                src={certification.image}
-                alt={certification.name}
-                layout="fill"
-                objectFit="contain"
-              />
-            </Box>
+          <Grid item xs={12} md={6} lg={3} >
+            <Box
+              component="img"
+              src={certification.image}
+              alt={certification.name}
+              height="80px"
+              width="auto"  // allow natural width but scale height
+              objectFit="cover"
+              // border='1px solid black'
+            />
           </Grid>
         ))}
       </Grid>
     </Container>
-  );
+  )
+    ;
 }
 
 LandingCertifications.propTypes = {
