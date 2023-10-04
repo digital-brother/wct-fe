@@ -12,7 +12,7 @@ export default function LandingSubscription() {
       <Typography variant="body2" mt={3}>
         Subscribe and stay up-to-date on Care/of news, exclusive offers, and more.
       </Typography>
-      <Button variant="contained" size="large" sx={{mt:3}}>Subscribe</Button>
+      <Button variant="contained" size="large" sx={{mt:3}} color="secondary">Subscribe</Button>
     </Box>
   )
 }

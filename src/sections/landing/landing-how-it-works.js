@@ -115,7 +115,7 @@ export default function LandingHowItWorks() {
           ))}
         </Timeline>
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 10}}>
-          <Button variant="contained" color="primary" size="large" >Take the quiz</Button>
+          <Button variant="contained" color="secondary" size="large" >Take the quiz</Button>
         </Box>
       </Container>
     </Box>

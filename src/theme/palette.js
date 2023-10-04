@@ -1,4 +1,5 @@
 import { alpha } from '@mui/material/styles';
+import {teal, orange} from "@mui/material/colors";
 
 // ----------------------------------------------------------------------
 
@@ -18,21 +19,23 @@ const GREY = {
 };
 
 const PRIMARY = {
-  lighter: '#FEE9D1',
-  light: '#FDAB76',
-  main: '#FA541C',
-  dark: '#B3200E',
-  darker: '#770508',
-  contrastText: '#FFFFFF',
+  // lighter: '#FEE9D1',
+  // light: '#FDAB76',
+  // main: '#FA541C',
+  // dark: '#B3200E',
+  // darker: '#770508',
+  // contrastText: '#FFFFFF',
+  main: teal[500],
 };
 
 const SECONDARY = {
-  lighter: '#E6DBFE',
-  light: '#B195FE',
-  main: '#754FFE',
-  dark: '#4027B6',
-  darker: '#1C0F79',
-  contrastText: '#FFFFFF',
+  // lighter: '#E6DBFE',
+  // light: '#B195FE',
+  // main: '#754FFE',
+  // dark: '#4027B6',
+  // darker: '#1C0F79',
+  // contrastText: '#FFFFFF',
+  main: orange[500],
 };
 
 const INFO = {
