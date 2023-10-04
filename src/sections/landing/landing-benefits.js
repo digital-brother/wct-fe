@@ -38,11 +38,11 @@ export default function LandingBenefits() {
         {BENEFITS.map((benefit, index) => (
           <Grid container item xs={12} sx={{flexDirection: index % 2 === 0 ? "row" : "row-reverse"}}>
 
-            <Grid item xs={5} sx={{border: '1px solid black'}}>
+            <Grid item xs={5}>
               <Image src={benefit.image}/>
             </Grid>
 
-            <Grid item xs={7} sx={{display: "flex", flexDirection: "column", justifyContent: "center", p: 4, border: '1px solid black'}}>
+            <Grid item xs={7} sx={{display: "flex", flexDirection: "column", justifyContent: "center", p: 4,}}>
               <Typography variant="h4">
                 {benefit.header}
               </Typography>

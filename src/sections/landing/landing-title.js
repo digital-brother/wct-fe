@@ -12,20 +12,20 @@ import Image from 'src/components/image';
 export default function LandingTitle() {
   return (
     <Grid container>
-      <Grid item xs={6} sx={{border: '1px solid black'}}>
+      <Grid item xs={6}>
         <Stack
           direction="column" justifyContent="center" alignItems="center" spacing={4}
           textAlign="center"
           p={10}
           width='100%' height='100%'
         >
-          <Typography variant="h2" sx={{border: '1px solid black'}}>
+          <Typography variant="h2">
             Personalised vitamins
           </Typography>
-          <Typography variant="h4" sx={{border: '1px solid black'}}>
+          <Typography variant="h4">
             Get the Nutrients Your Body Needs for Peak Performance
           </Typography>
-          <Typography variant="body1" sx={{border: '1px solid black'}}>
+          <Typography variant="body1">
             Take the guesswork out and Find the personalised Supplement Plan Designed just For You
           </Typography>
           <Card sx={{minWidth: 275}}>
@@ -39,7 +39,7 @@ export default function LandingTitle() {
           </Card>
         </Stack>
       </Grid>
-      <Grid item xs={6} sx={{border: '1px solid black'}}>
+      <Grid item xs={6}>
         <Image
           alt="banking"
           src="/title.jpg"
