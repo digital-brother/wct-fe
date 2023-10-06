@@ -42,7 +42,7 @@ export default function LandingCertifications({brands}) {
     <Container
       sx={{
         textAlign: 'center',
-        pt: {xs: 0, md: 5},
+        pt: {xs: 5, md: 10},
         pb: {xs: 10, md: 15},
       }}
     >

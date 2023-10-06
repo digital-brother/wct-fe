@@ -48,12 +48,7 @@ export default function LandingHowItWorks() {
   return (
     <Box
       sx={{
-        ...bgGradient({
-          color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/background/overlay_2.jpg',
-        }),
-        color: 'common.white',
-        py: {xs: 10, md: 15},
+        py: 10,
       }}
     >
       <Container>

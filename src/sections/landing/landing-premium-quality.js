@@ -34,47 +34,50 @@ const QUALITIES = [
 
 export default function LandingPremiumQuality() {
   return (
-    <Container
-      sx={{
-        textAlign: 'center',
-        pt: { xs: 5, md: 10 },
-        pb: { xs: 5, md: 10 },
-      }}
-    >
-      <Typography variant="h2">Premium Quality </Typography>
 
-      <Box
+    <Box bgcolor='background.neutral'>
+      <Container
         sx={{
-          mt: 10, //
-          rowGap: 8,
-          columnGap: 10,
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(3, 1fr)',
-          },
+          textAlign: 'center',
+          pt: {xs: 5, md: 10},
+          pb: {xs: 5, md: 10},
         }}
       >
-        {QUALITIES.map((value) => (
-          <div key={value.title}>
-            <SvgColor
-              src={value.icon}
-              color="info"
-              sx={{
-                width: 64,
-                height: 64,
-                mx: 'auto',
-                bgcolor: 'primary.main',
-              }}
-            />
+        <Typography variant="h2">Premium Quality </Typography>
 
-            <Typography variant="h4" sx={{ mt: 3, mb: 1 }}>
-              {value.title}
-            </Typography>
-          </div>
-        ))}
-      </Box>
-    </Container>
+        <Box
+          sx={{
+            mt: 10, //
+            rowGap: 8,
+            columnGap: 10,
+            display: 'grid',
+            gridTemplateColumns: {
+              xs: 'repeat(1, 1fr)',
+              sm: 'repeat(2, 1fr)',
+              md: 'repeat(3, 1fr)',
+            },
+          }}
+        >
+          {QUALITIES.map((value) => (
+            <div key={value.title}>
+              <SvgColor
+                src={value.icon}
+                color="info"
+                sx={{
+                  width: 64,
+                  height: 64,
+                  mx: 'auto',
+                  bgcolor: 'primary.main',
+                }}
+              />
+
+              <Typography variant="h4" sx={{mt: 3, mb: 1}}>
+                {value.title}
+              </Typography>
+            </div>
+          ))}
+        </Box>
+      </Container>
+    </Box>
   );
 }

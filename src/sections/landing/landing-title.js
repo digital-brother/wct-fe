@@ -11,7 +11,7 @@ import Image from 'src/components/image';
 
 export default function LandingTitle() {
   return (
-    <Grid container>
+    <Grid container bgcolor='background.neutral'>
       <Grid item xs={6}>
         <Stack
           direction="column" justifyContent="center" alignItems="center" spacing={4}

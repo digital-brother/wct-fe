@@ -28,7 +28,7 @@ const BENEFITS = [
 
 export default function LandingBenefits() {
   return (
-    <Box textAlign="center" display="flex" flexDirection="column" alignItems="center">
+    <Box textAlign="center" display="flex" flexDirection="column" alignItems="center" bgcolor='background.neutral' pt={10}>
 
       <Typography variant="h2">
         A Whole New World of Personalised Health & Wellness
