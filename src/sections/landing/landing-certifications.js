@@ -46,11 +46,19 @@ export default function LandingCertifications({brands}) {
         pb: {xs: 10, md: 15},
       }}
     >
-      <Typography variant="h2" sx={{mb: {xs: 3, md: 5}}}>Certifications</Typography>
+      <div
+        style={{
+          width: "100%",
+          height: "2px",
+          backgroundColor: "#e0e0e0",
+          marginBottom: "50px"
+        }}
+      />
+      {/*<Typography variant="h2" sx={{mb: {xs: 3, md: 5}}}>Certifications</Typography>*/}
 
       <Grid container spacing={3}>
         {CERTIFICATIONS.map((certification) => (
-          <Grid item xs={12} md={6} lg={3} >
+          <Grid item xs={12} md={6} lg={3}>
             <Box
               component="img"
               src={certification.image}

@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import SvgColor from 'src/components/svg-color';
+import LandingCertifications from "./landing-certifications";
 
 // ----------------------------------------------------------------------
 
@@ -35,7 +36,7 @@ const QUALITIES = [
 export default function LandingPremiumQuality() {
   return (
 
-    <Box bgcolor='background.neutral'>
+    <Box bgcolor="#fff8e1">
       <Container
         sx={{
           textAlign: 'center',
@@ -50,7 +51,7 @@ export default function LandingPremiumQuality() {
             mt: 10, //
             rowGap: 8,
             columnGap: 10,
-            display: 'grid',
+            display: 'flex',
             gridTemplateColumns: {
               xs: 'repeat(1, 1fr)',
               sm: 'repeat(2, 1fr)',
@@ -77,6 +78,7 @@ export default function LandingPremiumQuality() {
             </div>
           ))}
         </Box>
+        <LandingCertifications/>
       </Container>
     </Box>
   );
