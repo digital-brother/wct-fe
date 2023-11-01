@@ -14,15 +14,15 @@ import LandingHeader from "./landing-header";
 export default function LandingView() {
   return (
     <>
-      <LandingHeader/>
+      {/*<LandingHeader/>*/}
       <LandingTitle/>
-      <LandingStatistics/>
-      <LandingBenefits/>
-      <LandingHowItWorks/>
-      <LandingPremiumQuality/>
-      <LandingTestimonial/>
-      <LandingCTA/>
-      <LandingSubscription/>
+      {/*<LandingStatistics/>*/}
+      {/*<LandingBenefits/>*/}
+      {/*<LandingHowItWorks/>*/}
+      {/*<LandingPremiumQuality/>*/}
+      {/*<LandingTestimonial/>*/}
+      {/*<LandingCTA/>*/}
+      {/*<LandingSubscription/>*/}
     </>
   );
 }
