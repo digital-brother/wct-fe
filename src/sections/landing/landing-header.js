@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
+import vector1 from "./images/vector1.svg";
 
 const lora = Lora({preload: false});
 
@@ -49,6 +50,20 @@ export default function LandingHeader() {
           },
 
         }}>Take The Quiz</Button>
+        {/*<SvgIcon component={vector1} inheritViewBox style={{*/}
+        {/*  position: "absolute",*/}
+        {/*  height: "100%",*/}
+        {/*  width: "14.21%",*/}
+        {/*  top: "0%",*/}
+        {/*  right: "0%",*/}
+        {/*  bottom: "0%",*/}
+        {/*  left: "85.79%",*/}
+        {/*  maxWidth: "100%",*/}
+        {/*  overflow: "hidden",*/}
+        {/*  maxHeight: "100%",*/}
+        {/*}}>*/}
+
+        {/*</SvgIcon>*/}
 
       </Container>
     </Box>

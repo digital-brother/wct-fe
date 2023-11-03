@@ -1,36 +1,35 @@
 import {SvgIcon} from "@mui/material";
 import Image from "next/image";
 import Logo from "../../components/svg-color/Logo.svg";
-import twitter from "./Twitter.svg"
-import youtube from "./youtube.svg"
-import instagram from "./instagram.svg"
-import inin from "./in.svg"
-import facebook from "./Facebook.svg"
-import socialinstagram from "./social-instagram 1.svg"
-import imgbg from "./imgbg.png"
-import imgbg2 from "./imgbg2.png"
-import rectangle from "./rectangle.png"
-import maskgroup from "./maskgroup.png"
-import group_237849 from "./Group237849.svg"
-import group_237851 from "./Group237851.svg"
-import arro from "./Arro.svg";
-import maskgroup2x from "./maskgroup2x.png"
-import group2x from "./groupx2.png"
-import medium from "./medium.png"
-import pills from "./pills.png"
-import gfx from "./gfx.png"
-import bg from "./Bg.svg"
-import vector1 from "./vector1.svg"
-import woman from "./woman.png"
-import woman1 from "./woman1.png"
-import star from "./star.svg"
-import mirror from "./mirror.svg"
-import mirror1 from "./mirror-1-1.svg"
-import mirror2 from "./mirror-1 10.svg"
-import frame from "./Frame.svg"
-import gmo from "./gmo.svg"
-import bio from "./bio.svg"
-
+import twitter from "./images/Twitter.svg"
+import youtube from "./images/youtube.svg"
+import instagram from "./images/instagram.svg"
+import inin from "./images/in.svg"
+import facebook from "./images/Facebook.svg"
+import socialinstagram from "./images/social-instagram 1.svg"
+import imgbg from "./images/imgbg.png"
+import imgbg2 from "./images/imgbg2.png"
+import rectangle from "./images/rectangle.png"
+import maskgroup from "./images/maskgroup.png"
+import group_237849 from "./images/Group237849.svg"
+import group_237851 from "./images/Group237851.svg"
+import arro from "./images/Arro.svg";
+import maskgroup2x from "./images/maskgroup2x.png"
+import group2x from "./images/groupx2.png"
+import medium from "./images/medium.png"
+import pills from "./images/pills.png"
+import gfx from "./images/gfx.png"
+import bg from "./images/Bg.svg"
+import vector1 from "./images/vector1.svg"
+import woman from "./images/woman.png"
+import woman1 from "./images/woman1.png"
+import star from "./images/star.svg"
+import mirror from "./images/mirror.svg"
+import mirror1 from "./images/mirror-1-1.svg"
+import mirror2 from "./images/mirror-1 10.svg"
+import frame from "./images/Frame.svg"
+import gmo from "./images/gmo.svg"
+import bio from "./images/bio.svg"
 
 
 const V3 = () => {
@@ -66,7 +65,7 @@ const V3 = () => {
             top: "5px",
             left: "27px",
             backgroundColor: "#faf5ef",
-            width: "1920px",
+            width: "100vw",
             height: "1294px",
           }}
         />
@@ -75,7 +74,7 @@ const V3 = () => {
             position: "absolute",
             top: "5px",
             left: "27px",
-            width: "1920px",
+            width: "100vw",
             height: "1046px",
             objectFit: "cover",
           }}
@@ -180,7 +179,7 @@ const V3 = () => {
             position: "absolute",
             top: "32px",
             left: "27px",
-            width: "1920px",
+            width: "100vw",
             height: "92px",
             textAlign: "left",
             fontSize: "18px",
@@ -391,7 +390,7 @@ const V3 = () => {
           }}
         >
           <span>⭐⭐⭐⭐⭐</span>
-          <span style={{ color: "#000" }}> “I feel better than ever”</span>
+          <span style={{color: "#000"}}> “I feel better than ever”</span>
         </b>
         <div
           style={{
@@ -457,7 +456,7 @@ const V3 = () => {
                 padding: "21.7283935546875px 32.59259033203125px",
               }}
             >
-              <div style={{ position: "relative", fontWeight: "500" }}>
+              <div style={{position: "relative", fontWeight: "500"}}>
                 Explore More
               </div>
             </div>
@@ -480,7 +479,7 @@ const V3 = () => {
                 color: "#fff",
               }}
             >
-              <div style={{ position: "relative", fontWeight: "500" }}>Yes</div>
+              <div style={{position: "relative", fontWeight: "500"}}>Yes</div>
             </div>
           </div>
         </div>
@@ -490,7 +489,7 @@ const V3 = () => {
           position: "absolute",
           top: "1294px",
           left: "0px",
-          width: "1920px",
+          width: "100vw",
           height: "657px",
           textAlign: "center",
         }}
@@ -501,7 +500,7 @@ const V3 = () => {
             top: "0px",
             left: "0px",
             backgroundColor: "#e4e1ce",
-            width: "1920px",
+            width: "100vw",
             height: "657px",
           }}
         />
@@ -568,7 +567,7 @@ const V3 = () => {
                   width: "435px",
                 }}
               >
-                <p style={{ margin: "" }}>
+                <p style={{margin: ""}}>
                   Enhance fitness, achieve vitality, improve performance, boost
                 </p>
               </div>
@@ -604,7 +603,7 @@ const V3 = () => {
                   width: "435px",
                 }}
               >
-                <p style={{ margin: "" }}>
+                <p style={{margin: ""}}>
                   energy, improve anxiety, live free of aches and pains, improve
                 </p>
               </div>
@@ -672,7 +671,7 @@ const V3 = () => {
           position: "absolute",
           top: "1948px",
           left: "0px",
-          width: "1920px",
+          width: "100vw",
           height: "885px",
           textAlign: "center",
           fontSize: "58px",
@@ -685,7 +684,7 @@ const V3 = () => {
             top: "0px",
             left: "0px",
             backgroundColor: "#fff8ef",
-            width: "1920px",
+            width: "100vw",
             height: "409px",
           }}
         />
@@ -695,7 +694,7 @@ const V3 = () => {
             top: "0px",
             left: "0px",
             backgroundColor: "#faf5ef",
-            width: "1920px",
+            width: "100vw",
             height: "767px",
           }}
         />
@@ -704,7 +703,7 @@ const V3 = () => {
             position: "absolute",
             top: "409px",
             left: "0px",
-            width: "1920px",
+            width: "100vw",
             height: "476px",
           }}
         >
@@ -714,7 +713,7 @@ const V3 = () => {
               top: "0px",
               left: "0px",
               backgroundColor: "#f1e4db",
-              width: "1920px",
+              width: "100vw",
               height: "476px",
             }}
           />
@@ -770,7 +769,7 @@ const V3 = () => {
                     marginTop: "5px",
                   }}
                 >
-                  <p style={{ margin: "" }}>OF CUSTOMERS</p>
+                  <p style={{margin: ""}}>OF CUSTOMERS</p>
                 </b>
                 <div
                   style={{
@@ -786,7 +785,7 @@ const V3 = () => {
                     height: "50px",
                   }}
                 >
-                  <p style={{ margin: "" }}>
+                  <p style={{margin: ""}}>
                     Feel Improvement in their health
                   </p>
                 </div>
@@ -803,7 +802,7 @@ const V3 = () => {
                     height: "50px",
                   }}
                 >
-                  <p style={{ margin: "" }}>98%</p>
+                  <p style={{margin: ""}}>98%</p>
                 </b>
               </div>
               <div
@@ -828,7 +827,7 @@ const V3 = () => {
                     marginTop: "5px",
                   }}
                 >
-                  <p style={{ margin: "" }}>OF CUSTOMERS</p>
+                  <p style={{margin: ""}}>OF CUSTOMERS</p>
                 </b>
                 <div
                   style={{
@@ -860,7 +859,7 @@ const V3 = () => {
                     height: "50px",
                   }}
                 >
-                  <p style={{ margin: "" }}>99%</p>
+                  <p style={{margin: ""}}>99%</p>
                 </b>
               </div>
               <div
@@ -885,7 +884,7 @@ const V3 = () => {
                     marginTop: "5px",
                   }}
                 >
-                  <p style={{ margin: "" }}>OF CUSTOMERS</p>
+                  <p style={{margin: ""}}>OF CUSTOMERS</p>
                 </b>
                 <div
                   style={{
@@ -917,7 +916,7 @@ const V3 = () => {
                     height: "50px",
                   }}
                 >
-                  <p style={{ margin: "" }}>95%</p>
+                  <p style={{margin: ""}}>95%</p>
                 </b>
               </div>
             </div>
@@ -944,7 +943,7 @@ const V3 = () => {
               height: "66px",
             }}
           >
-            <p style={{ margin: "" }}>Media</p>
+            <p style={{margin: ""}}>Media</p>
           </b>
           <div
             style={{
@@ -1467,7 +1466,7 @@ const V3 = () => {
             }}
           >
             <p
-              style={{ margin: "" }}
+              style={{margin: ""}}
             >{`Welcome to a Whole New World of Personalised Health & Wellness`}</p>
           </b>
         </div>
@@ -1528,7 +1527,7 @@ const V3 = () => {
               height: "87px",
             }}
           >
-            <p style={{ margin: "" }}>How it works</p>
+            <p style={{margin: ""}}>How it works</p>
           </b>
           <div
             style={{
@@ -1677,7 +1676,7 @@ const V3 = () => {
                   fontWeight: "500",
                 }}
               >
-                <p style={{ margin: "" }}>
+                <p style={{margin: ""}}>
                   Use our app to build healthy habits and maximise your results
                 </p>
               </div>
@@ -1746,7 +1745,7 @@ const V3 = () => {
                 fontWeight: "500",
               }}
             >
-              <p style={{ margin: "" }}>
+              <p style={{margin: ""}}>
                 Tell us about your health goals, conditions, diet and lifestyle
               </p>
             </div>
@@ -1958,7 +1957,7 @@ const V3 = () => {
                 >
                   Quality Ingredients
                 </b>
-                <SvgIcon component={mirror} inheritViewBox                   style={{
+                <SvgIcon component={mirror} inheritViewBox style={{
                   position: "absolute",
                   top: "0px",
                   left: "44px",
@@ -2018,7 +2017,7 @@ const V3 = () => {
                 >
                   No nasties
                 </b>
-                <SvgIcon component={mirror1} inheritViewBox                   style={{
+                <SvgIcon component={mirror1} inheritViewBox style={{
                   position: "absolute",
                   top: "0px",
                   left: "1px",
@@ -2098,7 +2097,7 @@ const V3 = () => {
                   height: "259px",
                 }}
               />
-              <SvgIcon component={gmo} inheritViewBox                 style={{
+              <SvgIcon component={gmo} inheritViewBox style={{
                 position: "absolute",
                 top: "46px",
                 left: "79px",
@@ -2127,7 +2126,7 @@ const V3 = () => {
                 >
                   Non GMO, Gluten Free
                 </b>
-                <SvgIcon component={mirror1} inheritViewBox                   style={{
+                <SvgIcon component={mirror1} inheritViewBox style={{
                   position: "absolute",
                   top: "0px",
                   left: "59px",
@@ -2306,7 +2305,7 @@ const V3 = () => {
                   gap: "2px",
                 }}
               >
-                <div style={{ position: "relative", lineHeight: "150%" }}>
+                <div style={{position: "relative", lineHeight: "150%"}}>
                   Monika Marques
                 </div>
                 <div
@@ -2320,7 +2319,7 @@ const V3 = () => {
                     fontSize: "13px",
                   }}
                 >
-                  <div style={{ position: "relative", lineHeight: "100%" }}>
+                  <div style={{position: "relative", lineHeight: "100%"}}>
                     Microblading
                   </div>
                   <img
@@ -2336,7 +2335,7 @@ const V3 = () => {
               </div>
             </div>
           </div>
-          <SvgIcon component={star} inheritViewBox             style={{
+          <SvgIcon component={star} inheritViewBox style={{
             position: "relative",
             width: "100px",
             height: "100px",
@@ -2413,7 +2412,7 @@ const V3 = () => {
                   gap: "2px",
                 }}
               >
-                <div style={{ position: "relative", lineHeight: "150%" }}>
+                <div style={{position: "relative", lineHeight: "150%"}}>
                   Veronica Rosetta
                 </div>
                 <div
@@ -2427,7 +2426,7 @@ const V3 = () => {
                     fontSize: "13px",
                   }}
                 >
-                  <div style={{ position: "relative", lineHeight: "100%" }}>
+                  <div style={{position: "relative", lineHeight: "100%"}}>
                     Ombré
                   </div>
                   <img
@@ -2444,7 +2443,7 @@ const V3 = () => {
             </div>
           </div>
         </div>
-        <SvgIcon component={arro} inheritViewBox           style={{ position: "relative", width: "108px", height: "32px" }}/>
+        <SvgIcon component={arro} inheritViewBox style={{position: "relative", width: "108px", height: "32px"}}/>
         <div
           style={{
             borderRadius: "50px",
@@ -2460,7 +2459,7 @@ const V3 = () => {
             fontSize: "15px",
           }}
         >
-          <b style={{ position: "relative", textTransform: "uppercase" }}>
+          <b style={{position: "relative", textTransform: "uppercase"}}>
             Read all reviews
           </b>
         </div>
@@ -2553,7 +2552,7 @@ const V3 = () => {
                 width: "790px",
               }}
             >
-              Get 10% off your first order + free shipping.  You can cancel or
+              Get 10% off your first order + free shipping. You can cancel or
               change up your subscription any time.
             </div>
             <div
@@ -2599,7 +2598,7 @@ const V3 = () => {
                 >
                   Take The Quiz
                 </b>
-                <SvgIcon component={vector1} inheritViewBox                   style={{
+                <SvgIcon component={vector1} inheritViewBox style={{
                   position: "absolute",
                   height: "100%",
                   width: "14.21%",
@@ -2625,7 +2624,7 @@ const V3 = () => {
               height: "313px",
             }}
           >
-            <SvgIcon component={bg} inheritViewBox               style={{
+            <SvgIcon component={bg} inheritViewBox style={{
               position: "absolute",
               top: "0px",
               left: "0px",
@@ -2649,7 +2648,7 @@ const V3 = () => {
           fontSize: "16.68px",
         }}
       >
-        <SvgIcon component={arro} inheritViewBox             style={{
+        <SvgIcon component={arro} inheritViewBox style={{
           position: "absolute",
           top: "643px",
           left: "612px",
@@ -3064,7 +3063,7 @@ const V3 = () => {
               }}
             />
           </div>
-          <SvgIcon component={group_237849} inheritViewBox             style={{
+          <SvgIcon component={group_237849} inheritViewBox style={{
             position: "absolute",
             top: "120px",
             left: "260px",
@@ -3125,9 +3124,9 @@ const V3 = () => {
                 }}
               >
                 <p
-                  style={{ margin: "", fontWeight: "600" }}
+                  style={{margin: "", fontWeight: "600"}}
                 >{`“Dr Brent Dorval PhD, our CSO, talking about the Food Sensitivity Testing at the recent A4M Gastroenterology Conference” - `}</p>
-                <p style={{ margin: "" }}>
+                <p style={{margin: ""}}>
                   <b>{`Dr Brent Dorval `}</b>
                 </p>
               </div>
@@ -3594,7 +3593,7 @@ const V3 = () => {
             fontSize: "20px",
           }}
         >
-          <div style={{ position: "relative", fontWeight: "600" }}>
+          <div style={{position: "relative", fontWeight: "600"}}>
             Services
           </div>
           <div
@@ -3615,15 +3614,15 @@ const V3 = () => {
                 gap: "15px",
               }}
             >
-              <div style={{ position: "relative" }}>Functional Medicine</div>
-              <div style={{ position: "relative" }}>Programs</div>
-              <div style={{ position: "relative" }}>
+              <div style={{position: "relative"}}>Functional Medicine</div>
+              <div style={{position: "relative"}}>Programs</div>
+              <div style={{position: "relative"}}>
                 Mindfulness Based Stress Reduction
               </div>
-              <div style={{ position: "relative" }}>
+              <div style={{position: "relative"}}>
                 Workplace Wellness Program
               </div>
-              <div style={{ position: "relative" }}>
+              <div style={{position: "relative"}}>
                 Preventive Health Screening
               </div>
             </div>
@@ -3693,7 +3692,7 @@ const V3 = () => {
               >
                 +65 9125 7500
               </div>
-              <div style={{ position: "relative", color: "#121211" }}>
+              <div style={{position: "relative", color: "#121211"}}>
                 admin@nutranourish.com
               </div>
             </div>
