@@ -1,4 +1,4 @@
-import QuizForm1 from "../components/quiz-form1";
+
 import EnergyFocusWellbeingForm from "../components/energy-focus-wellbeing-form";
 import CustomerCardForm from "../components/customer-card-form";
 import HealthierHappierSection from "../components/healthier-happier-section";
@@ -6,7 +6,6 @@ import MediaCard from "../components/media-card";
 import Container01 from "../components/container01";
 import Container02 from "../components/container02";
 import Container from "../components/container";
-import ContainerCard2 from "../components/container-card2";
 import QualityIngredientsSection from "../components/quality-ingredients-section";
 import FormContainer1 from "../components/form-container1";
 import PersonalizedPlansCard from "../components/personalized-plans-card";
@@ -14,6 +13,8 @@ import FormContainer2 from "../components/form-container2";
 import NutraNourishVideoContainer from "../components/nutra-nourish-video-container";
 import ContactFormContainer from "../components/contact-form-container";
 import CopyrightFooterContainer from "../components/copyright-footer-container";
+import HowItWorksSection from "../components/how-it-works-section";
+import Header from "../components/quiz-form1";
 
 const LandingPage = () => {
   return (
@@ -44,8 +45,8 @@ const LandingPage = () => {
             position: "absolute",
             top: "5px",
             left: "27px",
-            backgroundColor: "#faf5ef",
-            width: "1920px",
+            backgroundColor: "black",
+            width: "100vw",
             height: "1294px",
           }}
         />
@@ -54,7 +55,7 @@ const LandingPage = () => {
             position: "absolute",
             top: "5px",
             left: "27px",
-            width: "1920px",
+            width: "100vw",
             height: "1046px",
             objectFit: "cover",
           }}
@@ -77,84 +78,84 @@ const LandingPage = () => {
           alt=""
           src="/svg.svg"
         />
-        <div
-          style={{
-            position: "absolute",
-            top: "213px",
-            left: "calc(50% - 579.5px)",
-            width: "1160px",
-            height: "300px",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "80px",
-              left: "calc(50% - 580px)",
-              width: "1160px",
-              height: "220px",
-            }}
-          >
-            <b
-              style={{
-                position: "absolute",
-                top: "0px",
-                left: "calc(50% - 580px)",
-                lineHeight: "80px",
-                display: "inline-block",
-                width: "1160px",
-              }}
-            >
-              Get the Nutrients You Need for Peak Performance
-            </b>
-            <b
-              style={{
-                position: "absolute",
-                top: "192px",
-                left: "calc(50% - 397px)",
-                fontSize: "20px",
-                lineHeight: "28px",
-              }}
-            >
-              Instant access to expert designed personalised Supplement Plan
-              made just For You
-            </b>
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: "0px",
-              left: "373px",
-              width: "366px",
-              height: "75px",
-              fontSize: "25px",
-            }}
-          >
-            <b
-              style={{
-                position: "absolute",
-                top: "0px",
-                left: "33px",
-                lineHeight: "75px",
-                textTransform: "uppercase",
-              }}
-            >
-              Personalised Vitamins 
-            </b>
-            <div
-              style={{
-                position: "absolute",
-                top: "20.5px",
-                left: "-2.5px",
-                borderRight: "5px solid #000",
-                boxSizing: "border-box",
-                width: "5px",
-                height: "33px",
-              }}
-            />
-          </div>
-        </div>
-        <QuizForm1 />
+        {/*<div*/}
+        {/*  style={{*/}
+        {/*    position: "absolute",*/}
+        {/*    top: "213px",*/}
+        {/*    left: "calc(50% - 579.5px)",*/}
+        {/*    width: "1160px",*/}
+        {/*    height: "300px",*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  <div*/}
+        {/*    style={{*/}
+        {/*      position: "absolute",*/}
+        {/*      top: "80px",*/}
+        {/*      left: "calc(50% - 580px)",*/}
+        {/*      width: "1160px",*/}
+        {/*      height: "220px",*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <b*/}
+        {/*      style={{*/}
+        {/*        position: "absolute",*/}
+        {/*        top: "0px",*/}
+        {/*        left: "calc(50% - 580px)",*/}
+        {/*        lineHeight: "80px",*/}
+        {/*        display: "inline-block",*/}
+        {/*        width: "1160px",*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      Get the Nutrients You Need for Peak Performance*/}
+        {/*    </b>*/}
+        {/*    <b*/}
+        {/*      style={{*/}
+        {/*        position: "absolute",*/}
+        {/*        top: "192px",*/}
+        {/*        left: "calc(50% - 397px)",*/}
+        {/*        fontSize: "20px",*/}
+        {/*        lineHeight: "28px",*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      Instant access to expert designed personalised Supplement Plan*/}
+        {/*      made just For You*/}
+        {/*    </b>*/}
+        {/*  </div>*/}
+        {/*  <div*/}
+        {/*    style={{*/}
+        {/*      position: "absolute",*/}
+        {/*      top: "0px",*/}
+        {/*      left: "373px",*/}
+        {/*      width: "366px",*/}
+        {/*      height: "75px",*/}
+        {/*      fontSize: "25px",*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <b*/}
+        {/*      style={{*/}
+        {/*        position: "absolute",*/}
+        {/*        top: "0px",*/}
+        {/*        left: "33px",*/}
+        {/*        lineHeight: "75px",*/}
+        {/*        textTransform: "uppercase",*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      Personalised Vitamins */}
+        {/*    </b>*/}
+        {/*    <div*/}
+        {/*      style={{*/}
+        {/*        position: "absolute",*/}
+        {/*        top: "20.5px",*/}
+        {/*        left: "-2.5px",*/}
+        {/*        borderRight: "5px solid #000",*/}
+        {/*        boxSizing: "border-box",*/}
+        {/*        width: "5px",*/}
+        {/*        height: "33px",*/}
+        {/*      }}*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        <Header />
         <div
           style={{
             position: "absolute",
@@ -225,20 +226,20 @@ const LandingPage = () => {
             src="/screenshot-4transformed-2@2x.png"
           />
         </div>
-        <b
-          style={{
-            position: "absolute",
-            top: "180px",
-            left: "208px",
-            fontSize: "25px",
-            lineHeight: "100%",
-            color: "#fff",
-          }}
-        >
-          <span>⭐⭐⭐⭐⭐</span>
-          <span style={{ color: "#000" }}> “I feel better than ever”</span>
-        </b>
-        <EnergyFocusWellbeingForm />
+        {/*<b*/}
+        {/*  style={{*/}
+        {/*    position: "absolute",*/}
+        {/*    top: "180px",*/}
+        {/*    left: "208px",*/}
+        {/*    fontSize: "25px",*/}
+        {/*    lineHeight: "100%",*/}
+        {/*    color: "#fff",*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  <span>⭐⭐⭐⭐⭐</span>*/}
+        {/*  <span style={{ color: "#000" }}> “I feel better than ever”</span>*/}
+        {/*</b>*/}
+        {/*<EnergyFocusWellbeingForm />*/}
       </div>
       <CustomerCardForm />
       <img
@@ -294,6 +295,7 @@ const LandingPage = () => {
         <HealthierHappierSection />
         <MediaCard />
       </div>
+      111
       <div
         style={{
           position: "absolute",
@@ -408,40 +410,7 @@ const LandingPage = () => {
           </b>
         </div>
       </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "5710px",
-          left: "299px",
-          width: "1320px",
-          height: "1109px",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: "0px",
-            left: "332px",
-            width: "608.55px",
-            height: "814px",
-          }}
-        >
-          <img
-            style={{
-              position: "absolute",
-              top: "0px",
-              left: "0px",
-              width: "608.55px",
-              height: "814px",
-              objectFit: "cover",
-              opacity: "0.8",
-            }}
-            alt=""
-            src="/1201759061053000supertanbrothers1748x2335amm1011647003834168-1@2x.png"
-          />
-        </div>
-        <ContainerCard2 />
-      </div>
+      <HowItWorksSection/>
       <QualityIngredientsSection />
       <FormContainer1 />
       <PersonalizedPlansCard />

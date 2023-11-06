@@ -33,8 +33,8 @@ export default function LandingHeader() {
         </SvgIcon>
 
         <Button className={lora.className} sx={{
-          width: 257,
-          height: 75,
+          width: 220,
+          height: 55,
           borderRadius: 32.5,
           backgroundColor: "#1F4934",
           verticalAlign: "inherit",

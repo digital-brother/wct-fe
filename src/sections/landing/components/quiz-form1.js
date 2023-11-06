@@ -1,6 +1,6 @@
 import QuizForm from "./quiz-form";
 
-const QuizForm1 = () => {
+const Header = () => {
   return (
     <div
       style={{
@@ -85,4 +85,4 @@ const QuizForm1 = () => {
   );
 };
 
-export default QuizForm1;
+export default Header;
