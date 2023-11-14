@@ -12,10 +12,10 @@ export default function QuizHeader() {
     <Box
       component="header"
       sx={{
-        backgroundColor: '#f9f4ee',
+        backgroundColor: '#f5f5f5',
         padding: '24px',
         alignItems: 'center',
-        borderBottom: "solid #F0D3D3 1px",
+        // borderBottom: "solid #F0D3D3 1px",
       }}
     >
       <Container maxWidth="lg" sx={{
