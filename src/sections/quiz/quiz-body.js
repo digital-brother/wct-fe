@@ -6,7 +6,6 @@ import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
 import Grid from '@mui/material/Grid';
 
-
 const lora = Lora({preload: false});
 
 // function VariantButton(text) {
@@ -26,7 +25,6 @@ function VariantButton() {
 }
 
 export default function QuizBody() {
-  QuestionList();
   return (
     <Box
       component="main"
