@@ -5,12 +5,24 @@ import Box from "@mui/material/Box";
 import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
 import Grid from '@mui/material/Grid';
+import useSWR from 'swr'
+import { useState } from 'react';
 
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 const lora = Lora({preload: false});
 
-// function VariantButton(text) {
-function VariantButton() {
-  return (
+
+function QuestionList() {
+  const { data, error, isLoading } = useSWR('http://localhost:8000/api/v1/quiz/questions/', fetcher);
+
+  if (error) return <div>Data loading error</div>
+  if (isLoading) return <div>Loading...</div>
+  return data;
+}
+
+
+function ChoiceVariantButton({ choice }) {
+    return (
     <Box
       component="div"
       sx={{
@@ -20,11 +32,36 @@ function VariantButton() {
         margin: "5px",
         textAlign: "center",
       }}
-    >Variant 1</Box>
+    >{ choice?.text }</Box>
   )
 }
 
+function QuestionForm({ question }) {
+  if (question?.type == "r") {
+    return <Box component="form">
+      <Box
+        component="div"
+        sx={{
+          alignItems: 'center',
+          fontWeight: "bold",
+          padding: "30px",
+          textAlign: "center",
+        }}
+      >{ question?.text }</Box>
+      <Grid container spacing={2} >
+        {question?.choices.map((x, i) =>
+          <Grid container item xs={6} direction="column" >
+            <ChoiceVariantButton choice={ x } />
+          </Grid>
+        )}
+      </Grid>
+    </Box>
+  }
+}
+
 export default function QuizBody() {
+  let questions = QuestionList() || [];
+  console.log(questions[0]);
   return (
     <Box
       component="main"
@@ -45,31 +82,7 @@ export default function QuizBody() {
         padding: "20px 40px 40px",
         alignItems: "stretch",
       }}>
-        <Box
-          component="div"
-          sx={{
-            alignItems: 'center',
-            fontWeight: "bold",
-            padding: "30px",
-            textAlign: "center",
-          }}
-        >QuestionText</Box>
-        <Box component="form">
-          <Grid container spacing={2} >
-            <Grid container item xs={6} direction="column" >
-              <VariantButton />
-              <VariantButton />
-              <VariantButton />
-              <VariantButton />
-            </Grid>
-            <Grid container item xs={6} direction="column" >
-              <VariantButton />
-              <VariantButton />
-              <VariantButton />
-              <VariantButton />
-            </Grid>
-          </Grid>
-        </Box>
+        <QuestionForm question={ questions[0] } />
       </Container>
     </Box>
   );
