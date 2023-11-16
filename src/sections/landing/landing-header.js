@@ -4,7 +4,6 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
-import vector1 from "./images/vector1.svg";
 
 const lora = Lora({preload: false});
 

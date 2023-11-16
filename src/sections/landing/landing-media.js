@@ -9,11 +9,13 @@ import cnbc from "src/sections/landing/images/cnbc.png"
 import tatler from "src/sections/landing/images/tatler.png"
 import right from "src/sections/landing/images/right.png"
 import left from "src/sections/landing/images/left.png"
+import {Box} from "@mui/material";
 
 export default function LandingMedia() {
   return (
-    <div style={{backgroundColor: "#FAF5EF", padding: "100px 100px",}}>
-      <div style={{display: "flex",
+    <Box
+      style={{backgroundColor: "#FAF5EF", padding: "100px 100px",}}>
+      <Box style={{display: "flex",
         justifyContent: "center",}}>
         <span style={{fontFamily: "Lora",
           fontSize: "45px",
@@ -23,10 +25,10 @@ export default function LandingMedia() {
           textAlign: "center",
           marginBottom: "40px",
         }}>Media</span>
-      </div>
-      <div style={{display: "flex",
+      </Box>
+      <Box style={{display: "flex",
         justifyContent: "center",}}>
-        <div>
+        <Box>
           <Image
             src={left}
             alt=""
@@ -45,8 +47,8 @@ export default function LandingMedia() {
             height: "125px",
           }}
         />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <Image
             src={istraits}
             alt=""
@@ -55,8 +57,8 @@ export default function LandingMedia() {
               height: "125px",
             }}
           />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <Image
             src={cnbc}
             alt=""
@@ -65,8 +67,8 @@ export default function LandingMedia() {
               height: "130px",
             }}
           />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <Image
             src={tatler}
             alt=""
@@ -85,8 +87,8 @@ export default function LandingMedia() {
               marginLeft: "15px",
             }}
           />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 }

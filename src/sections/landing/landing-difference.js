@@ -1,4 +1,4 @@
-import {SvgIcon} from "@mui/material";
+import {Box, SvgIcon} from "@mui/material";
 import mirror from "./images/mirror.svg";
 import Image from "next/image";
 import alarm from "src/sections/landing/images/alarm-star1.png"
@@ -7,33 +7,28 @@ import rat from "src/sections/landing/images/star-rating-blank.png"
 
 export default function LandingDifference() {
   return (
-    <div style={{backgroundColor: "#E4E1CE"}}>
-      <div style={{display: "flex", justifyContent: "center", flexDirection: "column"}}>
-        <span style={{fontFamily: "Lora",
-          fontSize: "50px",
-          fontWeight: 700,
-          lineHeight: "65px",
-          letterSpacing: "0em",
-          textAlign: "center",
-          marginTop: "100px",
-        }}>Feel the difference, just like 10,000+ </span>
-        <span style={{fontFamily: "Lora",
-          fontSize: "50px",
-          fontWeight: 700,
-          lineHeight: "65px",
-          letterSpacing: "0em",
-          textAlign: "center",
-          marginBottom: "65px",
-        }}> of our customers</span>
-      </div>
-      <div style={{display: "flex", justifyContent: "space-evenly", }}>
+    <Box style={{backgroundColor: "#E4E1CE", display: "flex", justifyContent: "center", flexDirection: "column", padding: "100px 100px"}}>
+              <span style={{fontFamily: "Lora",
+                fontSize: "50px",
+                fontWeight: 700,
+                lineHeight: "65px",
+                letterSpacing: "0em",
+                textAlign: "center",
+              }}>Feel the difference, just like 10,000+ </span>
+      <span style={{fontFamily: "Lora",
+        fontSize: "50px",
+        fontWeight: 700,
+        lineHeight: "65px",
+        letterSpacing: "0em",
+        textAlign: "center",
+        marginBottom: "65px",
+      }}> of our customers</span>
+      <Box style={{display: "flex", justifyContent: "space-evenly", }}>
         <div style={{width: "340px",
           textAlign: "center",
           display: "flex",
-          justifyContent: "center",
           flexDirection: "column",
-          alignItems: "center",
-          marginBottom: "100px",}}>
+          alignItems: "center",}}>
           <Image
             src={mirr}
             alt=""
@@ -51,12 +46,10 @@ export default function LandingDifference() {
           lineHeight: "130%", /* 33.8px */
           textTransform: "capitalize"}}>Enhance fitness, achieve vitality, improve performance, boost</span>
         </div>
-        <div style={{display: "flex",
-          justifyContent: "center",
+        <Box style={{display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: "340px",
-          marginBottom: "100px",}}>
+          width: "340px",}}>
           <Image
             src={alarm}
             alt=""
@@ -73,13 +66,11 @@ export default function LandingDifference() {
             fontWeight: 600,
             lineHeight: "130%", /* 33.8px */
             textTransform: "capitalize"}}>Energy, Improve anxiety, Live free of aches and pains, Improve</span>
-        </div>
+        </Box>
         <div style={{display: "flex",
-          justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          width: "340px",
-          marginBottom: "100px",}}>
+          width: "340px",}}>
           <Image
             src={rat}
             alt=""
@@ -98,7 +89,7 @@ export default function LandingDifference() {
             textTransform: "capitalize"}}>Sleep And Immunity.</span>
         </div>
 
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
