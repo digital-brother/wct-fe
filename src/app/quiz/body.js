@@ -11,7 +11,7 @@ function VariantButton() {
     <Box
       sx={{
         backgroundColor: theme.palette.quiz.button.backgroundColor,
-        padding: 3,
+        p: 3,
         borderRadius: 0.6,
         margin: 0.6,
         textAlign: "center",
@@ -27,29 +27,21 @@ export default function Body() {
       component="main"
       sx={{
         backgroundColor: theme.palette.quiz.backgroundColor,
-        padding: 3,
-        alignItems: 'center',
+        p: 3,
       }}
     >
       <Container maxWidth="lg" sx={{
-        display: "flex",
-        flexDirection: "column",
-        flexWrap: "wrap",
-        alignItems: "center",
         backgroundColor: theme.palette.quiz.container.backgroundColor,
         borderRadius: 2,
         border: "solid " + theme.palette.quiz.container.borderColor + " 0.2em",
-        paddingTop: 2.6,
-        paddingLeft: 3.2,
-        paddingRight: 3.2,
-        paddingBottom: 5,
-        alignItems: "stretch",
+        pt: 2.6,
+        px: 3.2,
+        pb: 5,
       }}>
         <Box
           sx={{
-            alignItems: 'center',
             fontWeight: "bold",
-            padding: 4,
+            p: 4,
             textAlign: "center",
           }}
         >QuestionText</Box>
