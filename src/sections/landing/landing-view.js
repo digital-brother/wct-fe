@@ -1,28 +1,21 @@
 'use client';
-
-
-import LandingCTA from "./landing-cta";
-import LandingTitle from "./landing-title";
-import LandingBenefits from "./landing-benefits";
-import LandingStatistics from "./landing-statistics";
-import LandingTestimonial from "./landing-testimonial";
-import LandingHowItWorks from "./landing-how-it-works";
-import LandingSubscription from "./landing-subscription";
-import LandingPremiumQuality from "./landing-premium-quality";
+import LandingPage from "./pages";
 import LandingHeader from "./landing-header";
+import LandingTitle from "./landing-title";
+import LandingDifference from "./landing-difference";
+import LandingMedia from "./landing-media";
+import LandingHealthier from "./landing-healthier";
+import LandingWelcome from "./landing-welcome";
 
 export default function LandingView() {
   return (
     <>
-      {/*<LandingHeader/>*/}
+      <LandingHeader/>
       <LandingTitle/>
-      {/*<LandingStatistics/>*/}
-      {/*<LandingBenefits/>*/}
-      {/*<LandingHowItWorks/>*/}
-      {/*<LandingPremiumQuality/>*/}
-      {/*<LandingTestimonial/>*/}
-      {/*<LandingCTA/>*/}
-      {/*<LandingSubscription/>*/}
+      <LandingDifference/>
+      <LandingMedia/>
+      <LandingHealthier/>
+      <LandingWelcome/>
     </>
   );
 }
