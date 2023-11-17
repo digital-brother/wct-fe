@@ -10,8 +10,15 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     mode: 'light',
-    background: {
-      quiz: '#F9F4EE',
+    quiz: {
+      backgroundColor: '#f9f4ee',
+      button: {
+        backgroundColor: '#fbf5ef',
+      },
+      container: {
+        backgroundColor: '#f3e4dc',
+        borderColor: '#f7eee9',
+      }
     },
   },
   typography: {
