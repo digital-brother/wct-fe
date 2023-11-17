@@ -4,18 +4,20 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
+import { useTheme } from '@mui/material/styles';
+
 
 const lora = Lora({preload: false});
 
 export default function QuizHeader() {
+  const theme = useTheme()
   return (
     <Box
       component="header"
       sx={{
-        backgroundColor: '#f5f5f5',
-        padding: '24px',
+        backgroundColor: theme.palette.background.quiz,
+        padding: '1.7em',
         alignItems: 'center',
-        // borderBottom: "solid #F0D3D3 1px",
       }}
     >
       <Container maxWidth="lg" sx={{
