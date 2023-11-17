@@ -1,6 +1,10 @@
 // ----------------------------------------------------------------------
 
 export const paths = {
+  // Quiz
+  quiz: {
+    root: '/quiz',
+  },
   // Marketing
   marketing: {
     root: '/marketing',
