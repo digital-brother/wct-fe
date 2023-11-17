@@ -15,7 +15,7 @@ export default function QuizHeader() {
     <Box
       component="header"
       sx={{
-        backgroundColor: theme.palette.background.quiz,
+        backgroundColor: theme.palette.quiz.backgroundColor,
         padding: '1.7em',
         alignItems: 'center',
       }}

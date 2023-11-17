@@ -111,7 +111,16 @@ export function palette(mode) {
       paper: '#FFFFFF',
       default: '#FFFFFF',
       neutral: GREY[200],
-      quiz: '#F9F4EE',
+    },
+    quiz: {
+      backgroundColor: '#F9F4EE',
+      button: {
+        backgroundColor: '#FBF5EF',
+      },
+      container: {
+        backgroundColor: '#F3E4DC',
+        borderColor: '#F7EEE9',
+      }
     },
     action: {
       ...COMMON.action,
