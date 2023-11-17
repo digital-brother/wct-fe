@@ -1,13 +1,8 @@
-import Button from "@mui/material/Button";
-import {SvgIcon} from "@mui/material";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Logo from "../../components/svg-color/Logo.svg";
 import {Lora} from '@next/font/google';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/material/styles';
-
-const lora = Lora({preload: false});
 
 function VariantButton() {
   const theme = useTheme();
@@ -15,9 +10,9 @@ function VariantButton() {
     <Box
       sx={{
         backgroundColor: theme.palette.quiz.button.backgroundColor,
-        padding: "1.5em",
-        borderRadius: "0.3em",
-        margin: "0.3em",
+        padding: 3,
+        borderRadius: 0.6,
+        margin: 0.6,
         textAlign: "center",
       }}
     >Variant 1</Box>
@@ -31,7 +26,7 @@ export default function QuizBody() {
       component="main"
       sx={{
         backgroundColor: theme.palette.quiz.backgroundColor,
-        padding: '1.5em',
+        padding: 3,
         alignItems: 'center',
       }}
     >
@@ -41,16 +36,20 @@ export default function QuizBody() {
         flexWrap: "wrap",
         alignItems: "center",
         backgroundColor: theme.palette.quiz.container.backgroundColor,
-        borderRadius: "1em",
+        borderRadius: 2,
         border: "solid " + theme.palette.quiz.container.borderColor + " 0.2em",
         padding: "1.3em 1.6em 2.5em",
+        paddingTop: 2.6,
+        paddingLeft: 3.2,
+        paddingRight: 3.2,
+        paddingBottom: 5,
         alignItems: "stretch",
       }}>
         <Box
           sx={{
             alignItems: 'center',
             fontWeight: "bold",
-            padding: "2em",
+            padding: 4,
             textAlign: "center",
           }}
         >QuestionText</Box>

@@ -7,8 +7,8 @@ import QuizBody from "./quiz-body";
 export default function QuizView() {
   return (
     <>
-      {<QuizHeader/>}
-      {<QuizBody/>}
+      <QuizHeader/>
+      <QuizBody/>
     </>
   );
 }
