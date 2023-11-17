@@ -57,7 +57,7 @@ function ChoiceVariantButton({ choice }) {
 }
 
 function QuestionForm({ question }) {
-  if (question?.type == "r") {
+  if (question?.type == "radio") {
     return <Box component="form">
       <Box
         component="div"
