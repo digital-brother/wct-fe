@@ -111,6 +111,7 @@ export function palette(mode) {
       paper: '#FFFFFF',
       default: '#FFFFFF',
       neutral: GREY[200],
+      quiz: '#F9F4EE',
     },
     action: {
       ...COMMON.action,
