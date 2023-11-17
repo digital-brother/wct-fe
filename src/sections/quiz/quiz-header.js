@@ -17,7 +17,6 @@ export default function QuizHeader() {
       sx={{
         backgroundColor: theme.palette.background.quiz,
         padding: '1.7em',
-        padding: {3},
         alignItems: 'center',
       }}
     >
