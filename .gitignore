@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+.next/
+
+todo.txt
+src/app/sandbox/
