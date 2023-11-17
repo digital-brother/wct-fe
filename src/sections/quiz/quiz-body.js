@@ -7,6 +7,7 @@ import {Lora} from '@next/font/google';
 import Grid from '@mui/material/Grid';
 import useSWR from 'swr'
 import { useState } from 'react';
+import { useSWRConfig } from "swr"
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 const lora = Lora({preload: false});
@@ -20,17 +21,36 @@ function QuestionList() {
   return data;
 }
 
+function CreateQuiz(email) {
+  fetch(
+    'http://localhost:8000/api/v1/quiz/',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email
+      })
+    }
+  )
+}
 
 function ChoiceVariantButton({ choice }) {
-    return (
+
+  function handleClick() {
+    CreateQuiz("loievskyi.slava@gmail.com")
+  }
+
+  return (
     <Box
       component="div"
+      onClick={handleClick}
       sx={{
         backgroundColor: '#fbf5ef',
         padding: "25px",
         borderRadius: "5px",
         margin: "5px",
         textAlign: "center",
+        border: "none",
       }}
     >{ choice?.text }</Box>
   )
