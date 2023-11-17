@@ -11,7 +11,7 @@ export default function Header() {
     <Box
       component="header"
       sx={{
-        backgroundColor: theme.palette.background.quiz,
+        backgroundColor: theme.palette.quiz.backgroundColor,
         padding: 1.7,
       }}
     >
