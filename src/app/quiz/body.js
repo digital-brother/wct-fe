@@ -47,8 +47,8 @@ export default function Body() {
         </Typography>
         <Box component="form">
           <Grid container columnSpacing={4} rowSpacing={1.2}>
-            {[...Array(8)].map(item => (
-              <Grid item xs={6}>
+            {[...Array(8)].map((item, index) => (
+              <Grid item xs={6} key={index}>
                 <VariantButton/>
               </Grid>
             ))}

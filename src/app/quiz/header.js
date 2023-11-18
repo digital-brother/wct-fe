@@ -16,7 +16,7 @@ export default function Header() {
       }}
     >
       <Container maxWidth="lg">
-        <Image src="logo.svg" alt="Logo" width={321} height={64} style={{display: "block"}}/>
+        <Image src="logo.svg" alt="Logo" width={321} height={64} priority={true} style={{display: "block"}}/>
       </Container>
     </Box>
   );
