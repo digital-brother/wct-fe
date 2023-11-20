@@ -15,6 +15,7 @@ export default function NumericInput(props) {
       display: "flex",
 
       mt: "37px",
+      mx: "auto",
       width: "1048px",
       height: "111px",
 
@@ -44,7 +45,6 @@ export default function NumericInput(props) {
           padding: '1px',
         }}
       />
-
     </Box>
   )
 }

@@ -12,13 +12,20 @@ import NumericInput from "@/app/quiz/components/numericInput";
 
 
 export default function Question() {
-  const {data, error, isLoading} = useSWR(QUESTIONS_PATH, fetcher)
+  // const {data, error, isLoading} = useSWR(QUESTIONS_PATH, fetcher)
+  // if (error) return <div>failed to load</div>
+  // if (isLoading) return <div>loading...</div>
+  // const question = data[2]
+  // console.log(question)
 
-  if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div>
-
-  const question = data[2]
-  console.log(question)
+  const question = {
+    choices: [],
+    id: 3,
+    order: 3,
+    parent_choice: null,
+    text: "How old are you?",
+    type: "numeric"
+  }
 
   return (
     <Container maxWidth="lg" sx={{
