@@ -6,7 +6,7 @@ import rat from "public/images/star-rating-blank.png"
 
 export default function LandingDifference() {
   return (
-    <Box style={{backgroundColor: "#E4E1CE", display: "flex", justifyContent: "center", flexDirection: "column", padding: "100px 100px"}}>
+    <Box style={{backgroundColor: "#E4E1CE", display: "flex", justifyContent: "center", flexDirection: "column", padding: "75px 75px"}}>
               <span style={{fontFamily: "Lora",
                 fontSize: "50px",
                 fontWeight: 700,

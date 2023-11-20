@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "public/images/logo.svg";
 import {Lora} from '@next/font/google';
+import Image from "next/image";
 
 const lora = Lora({preload: false});
 
@@ -22,14 +23,7 @@ export default function LandingHeader() {
         display: "flex",
         justifyContent: "space-between",
       }}>
-        <SvgIcon component={Logo} inheritViewBox sx={{
-          width: 321,
-          height: 64,
-          top: 28,
-          left: 170,
-        }}>
-
-        </SvgIcon>
+        <Image src={Logo} alt="Logo" width={321} height={64} style={{display: "block"}}/>
 
         <Button className={lora.className} sx={{
           width: 220,

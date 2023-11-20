@@ -28,15 +28,16 @@ export default function LandingMedia() {
       </Box>
       <Box style={{display: "flex",
         justifyContent: "center",}}>
-        <Box>
+        <Box style={{display: "flex"}}>
           <Image
             src={left}
             alt=""
             style={{
               width: "35px",
               height: "35px",
-              marginBottom: "45px",
+              marginTop: "45px",
               marginRight: "15px",
+
             }}
           />
           <Image
@@ -68,7 +69,7 @@ export default function LandingMedia() {
             }}
           />
         </Box>
-        <Box>
+        <Box style={{display: "flex"}}>
           <Image
             src={tatler}
             alt=""
@@ -83,7 +84,7 @@ export default function LandingMedia() {
             style={{
               width: "35px",
               height: "35px",
-              marginBottom: "45px",
+              marginTop: "45px",
               marginLeft: "15px",
             }}
           />

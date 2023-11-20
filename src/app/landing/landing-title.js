@@ -4,6 +4,8 @@ import image2 from "public/images/image2.svg"
 import image3 from "public/images/image3.svg"
 import image4 from "public/images/image4.svg"
 import image5 from "public/images/image5.svg"
+import Image from "next/image";
+import Logo from "../../../public/images/logo.svg";
 
 
 export default function LandingTitle() {
@@ -74,7 +76,7 @@ export default function LandingTitle() {
             border: "2px dashed #FFF",
             background: "#F1E4DB",
             boxShadow: "0px 20px 50px 0px rgba(209, 178, 114, 0.25)",
-            marginBottom: 85,
+            marginBottom: "50px",
           }}>
             <Box style={{marginBottom: "15px",}}>
             <span style={{
@@ -128,35 +130,19 @@ export default function LandingTitle() {
               </button>
             </Box>
           </Box>
-          <Box>
-            <SvgIcon component={image1} inheritViewBox style={{
-              width: 200,
-              height: 230,
-              marginLeft: 100,}}>
-
-            </SvgIcon>
-            <SvgIcon component={image2} inheritViewBox style={{
-              width: 200,
-              height: 235}}>
-
-            </SvgIcon>
-            <SvgIcon component={image3} inheritViewBox style={{
-              width: 430,
-              height: 185,
-              marginRight: 30}}>
-
-            </SvgIcon>
-            <SvgIcon component={image4} inheritViewBox style={{
-              width: 200,
-              height: 160}}>
-
-            </SvgIcon>
-            <SvgIcon component={image5} inheritViewBox style={{
-              width: 200,
-              height: 170,
-              marginRight: 30}}>
-
-            </SvgIcon>
+          <Box style={{display: "flex", marginBottom: "50px",}}>
+            <Image src={image1} alt="" width={200} height={230} style={{display: "block",
+              height: "auto",}}/>
+            <Image src={image2} alt="" width={200} height={235} style={{display: "block",
+              height: "auto",}}/>
+            <Image src={image3} alt="" width={430} height={185} style={{display: "block",
+              height: "auto", marginRight: "30px",}}/>
+            <Image src={image4} alt="" width={200} height={160} style={{display: "block",
+              height: "auto",
+              marginRight: "30px",}}/>
+            <Image src={image5} alt="" width={200} height={170} style={{display: "block",
+              height: "auto",
+              marginRight: "30px",}}/>
           </Box>
         </Box>
       </Box>

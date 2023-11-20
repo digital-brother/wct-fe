@@ -6,7 +6,7 @@ export default function LandingHealthier() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center", backgroundColor: "#F1E4DB",
-      padding: "100px 100px"
+      padding: "75px 75px"
     }}>
       <Box style={{marginBottom: "50px"}}>
         <span style={{

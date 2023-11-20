@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import LandingHeader from "@/app/landing/landing-header";
 import LandingTitle from "@/app/landing/landing-title";

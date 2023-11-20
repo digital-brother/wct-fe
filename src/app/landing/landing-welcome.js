@@ -7,7 +7,7 @@ import {Box} from "@mui/material";
 
 export default function LandingWelcome() {
   return (
-    <Box style={{background: "#FFF8EF", padding: "100px"}}>
+    <Box style={{background: "#FFF8EF", padding: "75px"}}>
       <Box style={{display: "flex", justifyContent: "center"}}>
         <span style={{fontFamily: "Lora",
           fontSize: "45px",
@@ -16,6 +16,7 @@ export default function LandingWelcome() {
           letterSpacing: "0px",
           textAlign: "center",
           width: "920px",
+          marginBottom: "30px",
         }}>Welcome to a Whole New World of Personalised Health & Wellness</span>
       </Box>
       <Box>
