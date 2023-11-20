@@ -1,6 +1,6 @@
 'use client'
 
-import {Input, InputAdornment} from "@mui/material";
+import {IconButton, Input} from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import React from "react";
 import {useTheme} from '@mui/material/styles';
@@ -35,16 +35,15 @@ export default function NumericInput(props) {
           fontSize: "35px",
         }}
       />
-      <KeyboardArrowRightRoundedIcon
-        sx={{
-          height: "66px",
-          width: "66px",
-          color: '#FFFFFF',
-          backgroundColor: '#1F4934',
-          borderRadius: '50%',
-          padding: '1px',
-        }}
-      />
+      <IconButton type="submit" sx={{
+        width: 66,
+        height: 66,
+        color: '#FFFFFF',
+        bgcolor: '#1F4934',
+        '&:hover': {bgcolor: '#367556'},
+      }}>
+        <KeyboardArrowRightRoundedIcon sx={{fontSize: 55}}/>
+      </IconButton>
     </Box>
   )
 }
