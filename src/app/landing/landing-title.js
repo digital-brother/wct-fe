@@ -5,7 +5,6 @@ import image3 from "public/images/image3.svg"
 import image4 from "public/images/image4.svg"
 import image5 from "public/images/image5.svg"
 import Image from "next/image";
-import Logo from "../../../public/images/logo.svg";
 
 
 export default function LandingTitle() {

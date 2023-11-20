@@ -1,5 +1,4 @@
 import Button from "@mui/material/Button";
-import {SvgIcon} from "@mui/material";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "public/images/logo.svg";

@@ -5,6 +5,7 @@ import LandingDifference from "@/app/landing/landing-difference";
 import LandingMedia from "@/app/landing/landing-media";
 import LandingHealthier from "@/app/landing/landing-healthier";
 import LandingWelcome from "@/app/landing/landing-welcome";
+import LandingHowItWorks from "@/app/landing/landing-howitworks";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <LandingMedia/>
         <LandingHealthier/>
         <LandingWelcome/>
+        <LandingHowItWorks/>
     </Box>
   );
 }
