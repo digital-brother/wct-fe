@@ -11,7 +11,7 @@ export default function NumericInput(props) {
   const theme = useTheme()
 
   return (
-    <Box {...props} sx={{
+    <Box sx={{
       display: "flex",
 
       mt: 4,
