@@ -26,13 +26,13 @@ export default function Question() {
       borderRadius: "25px",
       border: `2px solid white`,
       boxShadow: '0px 20px 50px rgba(209, 178, 114, 0.25)',
-      pt: 2.6,
-      px: 3.2,
-      pb: 5,
+      pt: "83px",
+      pl: "97px",
+      pr: "105px",
+      pb: "59px",
     }}>
       <Typography variant="h3" sx={{
         fontWeight: "bold",
-        mt: 10,
         textAlign: "center",
       }}
       >{question.text}

@@ -14,13 +14,13 @@ export default function NumericInput(props) {
     <Box sx={{
       display: "flex",
 
-      mt: 4,
-      width: 1048,
-      height: 111,
+      mt: "37px",
+      width: "1048px",
+      height: "111px",
 
       background: '#FAF5EF',
       border: '3px white solid',
-      borderRadius: 54.32,
+      borderRadius: "54.32px",
 
       pl: "50px",
       pr: "32.59px",
@@ -31,13 +31,13 @@ export default function NumericInput(props) {
         disableUnderline={true}
         sx={{
           width: "100%",
-          fontSize: 35,
+          fontSize: "35px",
         }}
       />
       <KeyboardArrowRightRoundedIcon
         sx={{
-          height: 66,
-          width: 66,
+          height: "66px",
+          width: "66px",
           color: '#FFFFFF',
           backgroundColor: '#1F4934',
           borderRadius: '50%',

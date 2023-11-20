@@ -11,14 +11,10 @@ export default function Quiz() {
   return (
     <>
       <Header/>
-      <Box
-        component="main"
-        sx={{
-          background: "#FAF5EF",
-          p: 3,
-          flexGrow: 1,
-        }}
-      >
+      <Box sx={{
+        background: "#FAF5EF",
+        mt: 10,
+      }}>
         <Question/>
       </Box>
     </>
