@@ -30,21 +30,22 @@ export default function Body() {
       }}
     >
       <Container maxWidth="lg" sx={{
-        backgroundColor: theme.palette.quiz.container.backgroundColor,
-        borderRadius: 2,
-        border: `solid ${theme.palette.quiz.container.borderColor} 0.2em`,
+        background: "#F1E4DB",
+        borderRadius: "25px",
+        border: `2px solid white`,
+        boxShadow: '0px 20px 50px rgba(209, 178, 114, 0.25)',
         pt: 2.6,
         px: 3.2,
         pb: 5,
       }}>
-        <Typography variant="h4" sx={{
+        <Typography variant="h3" sx={{
           fontWeight: "bold",
-          mt: 4,
+          mt: 10,
           textAlign: "center",
         }}
         >{question.text}
         </Typography>
-        <NumericInput sx={{mt:4, display: 'flex', justifyContent: "center"}}/>
+        <NumericInput sx={{mt:5, mb: 10, display: 'flex', justifyContent: "center"}}/>
       </Container>
     </Box>
   );
