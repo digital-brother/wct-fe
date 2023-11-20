@@ -8,16 +8,17 @@ const roboto = Roboto({
 });
 
 const theme = createTheme({
+
   palette: {
     mode: 'light',
     quiz: {
-      backgroundColor: '#f9f4ee',
+      backgroundColor: '#FFF8EF',
       button: {
         backgroundColor: '#fbf5ef',
       },
       container: {
-        backgroundColor: '#f3e4dc',
-        borderColor: '#f7eee9',
+        backgroundColor: '#F1E4DB',
+        borderColor: '#FFFFFF',
       }
     },
   },
