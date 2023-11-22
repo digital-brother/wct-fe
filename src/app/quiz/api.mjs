@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const API_HOST = 'http://localhost:8000/api/v1';
-export const QUESTIONS_PATH = '/quiz/questions/';
-export const ANSWERS_PATH = '/quiz/answers/';
+const QUESTIONS_PATH = '/quiz/questions/';
+const ANSWERS_PATH = '/quiz/answers/';
 
 const client = axios.create({
   baseURL: API_HOST,
