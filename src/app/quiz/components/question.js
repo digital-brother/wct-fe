@@ -9,7 +9,6 @@ import useSWR from "swr";
 
 
 export default function Question() {
-  // SWR get
   const {
     data: getQuestionsData,
     error: getQuestionsError,
@@ -23,14 +22,6 @@ export default function Question() {
   console.log(getQuestionsData);
 
   const question = getQuestionsData[2]
-  // const question = {
-  //   choices: [],
-  //   id: 3,
-  //   order: 3,
-  //   parent_choice: null,
-  //   text: "How old are you?",
-  //   type: "numeric"
-  // }
 
   return (
     <Container maxWidth="lg" sx={{

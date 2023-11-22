@@ -8,7 +8,6 @@ const client = axios.create({
   baseURL: API_HOST,
   withCredentials: true,
   timeout: 1000,
-  // headers: {Cookie: 'sessionid=1xt7r64kod93g9kwjtpwv9yl15s73eav'},
 });
 
 export async function getQuestions() {
@@ -21,8 +20,3 @@ export async function postAnswer(url, {arg: data}) {
   const response = await client.post(ANSWERS_PATH, data)
   return response.data
 }
-
-
-// const data = {question: 3, text: 47}
-// const createdAnswer = await postAnswer(data)
-// console.log(createdAnswer);
