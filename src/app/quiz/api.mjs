@@ -1,4 +1,4 @@
-let axios = require('axios')
+import axios from 'axios'
 
 const API_HOST = 'http://localhost:8000/api/v1';
 export const QUESTIONS_PATH = '/quiz/questions/';
@@ -6,8 +6,9 @@ export const ANSWERS_PATH = '/quiz/answers/';
 
 const client = axios.create({
   baseURL: API_HOST,
+  withCredentials: true,
   timeout: 1000,
-  headers: {Cookie: 'sessionid=1xt7r64kod93g9kwjtpwv9yl15s73eav'},
+  // headers: {Cookie: 'sessionid=1xt7r64kod93g9kwjtpwv9yl15s73eav'},
 });
 
 export async function getQuestions() {
