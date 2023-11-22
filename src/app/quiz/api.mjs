@@ -16,7 +16,8 @@ export async function getQuestions() {
   return response.data;
 }
 
-export async function postAnswer(data) {
+export async function postAnswer(url, {arg: data}) {
+  console.log(data);
   const response = await client.post(ANSWERS_PATH, data)
   return response.data
 }

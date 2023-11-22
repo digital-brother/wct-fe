@@ -1,36 +1,36 @@
 'use client'
 
-import Box from "@mui/material/Box";
-import {useTheme} from '@mui/material/styles';
-import useSWR from 'swr'
 import Container from "@mui/material/Container";
-import {IconButton, Input, InputAdornment, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import {getQuestions} from "@/app/quiz/api";
 import React from "react";
-import {Visibility} from "@mui/icons-material";
 import NumericInput from "@/app/quiz/components/numericInput";
+import useSWR from "swr";
 
 
 export default function Question() {
-  const {data, error, isLoading} = useSWR('questions', getQuestions)
-  if (error) {
-    return <div>failed to load. {error.message}. {JSON.stringify(error.response?.data)}</div>
+  // SWR get
+  const {
+    data: getQuestionsData,
+    error: getQuestionsError,
+    isLoading: getQuestionsIsLoading
+  } = useSWR('questions', getQuestions)
+
+  if (getQuestionsError) {
+    return <div>failed to load. {getQuestionsError.message}. {JSON.stringify(getQuestionsError.response?.data)}</div>
   }
-  if (isLoading) return <div>loading...</div>
+  if (getQuestionsIsLoading) return <div>loading...</div>
+  console.log(getQuestionsData);
 
-  console.log(data);
-
-  // const question = data[2]
-  // console.log(question)
-
-  const question = {
-    choices: [],
-    id: 3,
-    order: 3,
-    parent_choice: null,
-    text: "How old are you?",
-    type: "numeric"
-  }
+  const question = getQuestionsData[2]
+  // const question = {
+  //   choices: [],
+  //   id: 3,
+  //   order: 3,
+  //   parent_choice: null,
+  //   text: "How old are you?",
+  //   type: "numeric"
+  // }
 
   return (
     <Container maxWidth="lg" sx={{
