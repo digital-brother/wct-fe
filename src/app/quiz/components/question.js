@@ -5,16 +5,21 @@ import {useTheme} from '@mui/material/styles';
 import useSWR from 'swr'
 import Container from "@mui/material/Container";
 import {IconButton, Input, InputAdornment, Typography} from "@mui/material";
-import {fetcher, QUESTIONS_PATH} from "@/app/quiz/api";
+import {getQuestions} from "@/app/quiz/api";
 import React from "react";
 import {Visibility} from "@mui/icons-material";
 import NumericInput from "@/app/quiz/components/numericInput";
 
 
 export default function Question() {
-  // const {data, error, isLoading} = useSWR(QUESTIONS_PATH, fetcher)
-  // if (error) return <div>failed to load</div>
-  // if (isLoading) return <div>loading...</div>
+  const {data, error, isLoading} = useSWR('questions', getQuestions)
+  if (error) {
+    return <div>failed to load. {error.message}. {JSON.stringify(error.response?.data)}</div>
+  }
+  if (isLoading) return <div>loading...</div>
+
+  console.log(data);
+
   // const question = data[2]
   // console.log(question)
 
@@ -41,8 +46,8 @@ export default function Question() {
       <Typography variant="h3" sx={{
         fontWeight: "bold",
         textAlign: "center",
-      }}
-      >{question.text}
+      }}>
+        {question.text}
       </Typography>
       <NumericInput/>
     </Container>
