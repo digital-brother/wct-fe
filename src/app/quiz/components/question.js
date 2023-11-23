@@ -7,6 +7,16 @@ import React from "react";
 import NumericInput from "@/app/quiz/components/numericInput";
 import useSWR from "swr";
 
+function BoxHeader({text}) {
+  return (
+    <Typography variant="h3" sx={{
+      fontWeight: "bold",
+      textAlign: "center",
+    }}>
+      {text}
+    </Typography>
+  )
+}
 
 export default function Question() {
   const {
@@ -15,13 +25,31 @@ export default function Question() {
     isLoading: getQuestionsIsLoading
   } = useSWR('questions', getQuestions)
 
-  if (getQuestionsError) {
-    return <div>failed to load. {getQuestionsError.message}. {JSON.stringify(getQuestionsError.response?.data)}</div>
-  }
-  if (getQuestionsIsLoading) return <div>loading...</div>
-  console.log(getQuestionsData);
+  let boxContent = null
 
-  const question = getQuestionsData[2]
+  if (getQuestionsError) {
+    boxContent = (
+      <>
+        <BoxHeader text="Failed to load"/>
+        <Typography variant="h5" sx={{mt: 3}}>
+          Please contact system administrator.<br/><br/>
+          {getQuestionsError.message}<br/>
+          {JSON.stringify(getQuestionsError.response?.data)}
+        </Typography>
+      </>
+    )
+  } else if (getQuestionsIsLoading) {
+    boxContent = <BoxHeader text="Loading..."/>
+  } else if (getQuestionsData) {
+    const question = getQuestionsData[2]
+    boxContent = (
+      <>
+        <BoxHeader text={question.text}/>
+        <NumericInput/>
+      </>
+    )
+  }
+  console.log(getQuestionsData);
 
   return (
     <Container maxWidth="lg" sx={{
@@ -33,14 +61,9 @@ export default function Question() {
       pl: "97px",
       pr: "105px",
       pb: "59px",
+      textAlign: "center",
     }}>
-      <Typography variant="h3" sx={{
-        fontWeight: "bold",
-        textAlign: "center",
-      }}>
-        {question.text}
-      </Typography>
-      <NumericInput/>
+      {boxContent}
     </Container>
   )
 }
