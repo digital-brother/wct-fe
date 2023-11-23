@@ -72,37 +72,35 @@ function Question() {
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  if (getQuestionsData) {
-    const question = getQuestionsData[3]
+  const question = getQuestionsData[3]
 
-    function handleAnswerSubmit(value) {
-      resetPostAnswer();
-      const payload = {question: question.id, text: value}
-      postAnswerTrigger(payload);
-    }
-
-    console.log(question)
-
-    const questionTypeComponentMapping = new Map(Object.entries({
-      numeric: NumericInput,
-      boolean: BooleanInput,
-    }))
-    const InputComponent = questionTypeComponentMapping.get(question.type)
-    if (!InputComponent) return <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
-
-    return (
-      <>
-        <BoxHeader text={question.text}/>
-        <InputComponent
-          question={question}
-          handleAnswerSubmit={handleAnswerSubmit}
-          postAnswerIsMutating={postAnswerIsMutating}
-          sx={{mt: 8}}
-        />
-        {postAnswerError &&
-          <><br/><br/><ErrorDetails error={postAnswerError}/></>
-        }
-      </>
-    )
+  function handleAnswerSubmit(value) {
+    resetPostAnswer();
+    const payload = {question: question.id, text: value}
+    postAnswerTrigger(payload);
   }
+
+  console.log(question)
+
+  const questionTypeComponentMapping = new Map(Object.entries({
+    numeric: NumericInput,
+    boolean: BooleanInput,
+  }))
+  const InputComponent = questionTypeComponentMapping.get(question.type)
+  if (!InputComponent) return <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
+
+  return (
+    <>
+      <BoxHeader text={question.text}/>
+      <InputComponent
+        question={question}
+        handleAnswerSubmit={handleAnswerSubmit}
+        postAnswerIsMutating={postAnswerIsMutating}
+        sx={{mt: 8}}
+      />
+      {postAnswerError &&
+        <><br/><br/><ErrorDetails error={postAnswerError}/></>
+      }
+    </>
+  )
 }
