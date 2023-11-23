@@ -6,6 +6,7 @@ import {getQuestions} from "@/app/quiz/api";
 import React from "react";
 import NumericInput from "@/app/quiz/components/numericInput";
 import useSWR from "swr";
+import BooleanInput from "@/app/quiz/components/booleanInput";
 
 function BoxHeader({text}) {
   return (
@@ -45,15 +46,29 @@ export default function Question() {
     boxContent = <ErrorDetails error={getQuestionsError}/>
   } else if (getQuestionsIsLoading) {
     boxContent = <BoxHeader text="Loading..."/>
+
   } else if (getQuestionsData) {
-    const question = getQuestionsData[2]
+    const question = getQuestionsData[1]
+
+    console.log(question)
+
+    const questionTypeComponentMapping = new Map(Object.entries({
+      numeric: NumericInput,
+      boolean: BooleanInput,
+    }))
+    const InputComponent = questionTypeComponentMapping.get(question.type)
+    if (!InputComponent) {
+      boxContent = (
+        <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
+      )
+    } else {
     boxContent = (
       <>
         <BoxHeader text={question.text}/>
-        <NumericInput/>
+        <InputComponent question={question}/>
       </>
     )
-  }
+  }}
 
   return (
     <Container maxWidth="lg" sx={{

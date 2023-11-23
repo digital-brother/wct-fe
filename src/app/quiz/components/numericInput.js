@@ -9,7 +9,7 @@ import {postAnswer} from "@/app/quiz/api.mjs";
 import {ErrorDetails} from "@/app/quiz/components/question";
 
 
-export default function NumericInput() {
+export default function NumericInput({question}) {
   const {
     data: postAnswerData,
     error: postAnswerError,
@@ -22,7 +22,7 @@ export default function NumericInput() {
 
   function handleSubmit() {
     resetPostAnswer();
-    const payload = {question: 3, text: inputRef.current.value}
+    const payload = {question: question.id, text: inputRef.current.value}
     postAnswerTrigger(payload);
   }
 
