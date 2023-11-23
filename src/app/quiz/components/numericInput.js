@@ -2,13 +2,13 @@
 
 import {IconButton, Input, Typography} from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import React from "react";
+import React, {useRef} from "react";
 import Box from "@mui/material/Box";
 import useSWRMutation from "swr/mutation";
 import {postAnswer} from "@/app/quiz/api.mjs";
 
 
-export default function NumericInput(props) {
+export default function NumericInput() {
   const {
     data: postAnswerData,
     error: postAnswerError,
@@ -17,10 +17,12 @@ export default function NumericInput(props) {
     reset: resetPostAnswer,
   } = useSWRMutation('answerst', postAnswer)
 
-  async function handleSubmit() {
-    const payload = {question: 3, text: 5}
+  const inputRef = useRef(null)
+
+  function handleSubmit() {
     resetPostAnswer();
-    await postAnswerTrigger(payload);
+    const payload = {question: 3, text: inputRef.current.value}
+    postAnswerTrigger(payload);
   }
 
   return (
@@ -44,6 +46,7 @@ export default function NumericInput(props) {
         <Input
           defaultValue="default"
           disableUnderline={true}
+          inputRef={inputRef}
           sx={{
             width: "100%",
             fontSize: "35px",
