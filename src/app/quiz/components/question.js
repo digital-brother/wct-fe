@@ -18,6 +18,20 @@ function BoxHeader({text}) {
   )
 }
 
+export function ErrorDetails({error}) {
+  return (
+    <>
+      <Typography variant="h5" sx={{fontWeight: "bold",}}>
+        Error occured. Please contact system administrator.
+      </Typography>
+      <Typography variant="h6" sx={{mt: 3}}>
+        {error?.message && error.message}<br/>
+        {error?.response?.data && JSON.stringify(error.response.data)}
+      </Typography>
+    </>
+  )
+}
+
 export default function Question() {
   const {
     data: getQuestionsData,
@@ -28,16 +42,7 @@ export default function Question() {
   let boxContent = null
 
   if (getQuestionsError) {
-    boxContent = (
-      <>
-        <BoxHeader text="Failed to load"/>
-        <Typography variant="h5" sx={{mt: 3}}>
-          Please contact system administrator.<br/><br/>
-          {getQuestionsError.message}<br/>
-          {JSON.stringify(getQuestionsError.response?.data)}
-        </Typography>
-      </>
-    )
+    boxContent = <ErrorDetails error={getQuestionsError}/>
   } else if (getQuestionsIsLoading) {
     boxContent = <BoxHeader text="Loading..."/>
   } else if (getQuestionsData) {

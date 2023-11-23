@@ -1,11 +1,12 @@
 'use client'
 
-import {IconButton, Input, Typography} from "@mui/material";
+import {IconButton, Input} from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import React, {useRef} from "react";
 import Box from "@mui/material/Box";
 import useSWRMutation from "swr/mutation";
 import {postAnswer} from "@/app/quiz/api.mjs";
+import {ErrorDetails} from "@/app/quiz/components/question";
 
 
 export default function NumericInput() {
@@ -62,11 +63,9 @@ export default function NumericInput() {
           <KeyboardArrowRightRoundedIcon sx={{fontSize: 55}}/>
         </IconButton>
       </Box>
-
-      <Typography sx={{mt: 5, textAlign: "center"}}>
-        {postAnswerError?.message}. {JSON.stringify(postAnswerError?.response?.data)}
-        {JSON.stringify(postAnswerData)}
-      </Typography>
+      {postAnswerError &&
+        <><br/><br/><ErrorDetails error={postAnswerError}/></>
+      }
     </>
   )
 }
