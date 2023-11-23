@@ -9,21 +9,11 @@ import {postAnswer} from "@/app/quiz/api.mjs";
 import {ErrorDetails} from "@/app/quiz/components/question";
 
 
-export default function NumericInput({question, ...props}) {
-  const {
-    data: postAnswerData,
-    error: postAnswerError,
-    isMutating: postAnswerIsMutating,
-    trigger: postAnswerTrigger,
-    reset: resetPostAnswer,
-  } = useSWRMutation('answers', postAnswer)
-
+export default function NumericInput({question, handleAnswerSubmit, postAnswerIsMutating, ...props}) {
   const inputRef = useRef(null)
 
   function handleSubmit() {
-    resetPostAnswer();
-    const payload = {question: question.id, text: inputRef.current.value}
-    postAnswerTrigger(payload);
+    return handleAnswerSubmit(inputRef.current.value)
   }
 
   return (
@@ -64,10 +54,6 @@ export default function NumericInput({question, ...props}) {
           <KeyboardArrowRightRoundedIcon sx={{fontSize: 55}}/>
         </IconButton>
       </Box>
-
-      {postAnswerError &&
-        <><br/><br/><ErrorDetails error={postAnswerError}/></>
-      }
     </Box>
   )
 }
