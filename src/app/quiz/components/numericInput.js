@@ -4,34 +4,20 @@ import {IconButton, Input} from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import React, {useRef} from "react";
 import Box from "@mui/material/Box";
-import useSWRMutation from "swr/mutation";
-import {postAnswer} from "@/app/quiz/api.mjs";
-import {ErrorDetails} from "@/app/quiz/components/question";
 
 
-export default function NumericInput() {
-  const {
-    data: postAnswerData,
-    error: postAnswerError,
-    isMutating: postAnswerIsMutating,
-    trigger: postAnswerTrigger,
-    reset: resetPostAnswer,
-  } = useSWRMutation('answers', postAnswer)
-
+export default function NumericInput({question, handleAnswerSubmit, postAnswerIsMutating, ...props}) {
   const inputRef = useRef(null)
 
   function handleSubmit() {
-    resetPostAnswer();
-    const payload = {question: 3, text: inputRef.current.value}
-    postAnswerTrigger(payload);
+    return handleAnswerSubmit(inputRef.current.value)
   }
 
   return (
-    <>
+    <Box {...props}>
       <Box sx={{
         display: "flex",
 
-        mt: "37px",
         mx: "auto",
         // width: "1048px",
         width: "100%",
@@ -65,9 +51,6 @@ export default function NumericInput() {
           <KeyboardArrowRightRoundedIcon sx={{fontSize: 55}}/>
         </IconButton>
       </Box>
-      {postAnswerError &&
-        <><br/><br/><ErrorDetails error={postAnswerError}/></>
-      }
-    </>
+    </Box>
   )
 }
