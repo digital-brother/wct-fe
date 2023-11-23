@@ -4,9 +4,6 @@ import {IconButton, Input} from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import React, {useRef} from "react";
 import Box from "@mui/material/Box";
-import useSWRMutation from "swr/mutation";
-import {postAnswer} from "@/app/quiz/api.mjs";
-import {ErrorDetails} from "@/app/quiz/components/question";
 
 
 export default function NumericInput({question, handleAnswerSubmit, postAnswerIsMutating, ...props}) {

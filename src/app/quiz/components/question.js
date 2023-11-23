@@ -67,20 +67,17 @@ function Question() {
     reset: resetPostAnswer,
   } = useSWRMutation('answers', postAnswer)
 
-  let boxContent = null
-
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  const question = getQuestionsData[3]
+  const question = getQuestionsData[1]
+  console.log(question)
 
   function handleAnswerSubmit(value) {
     resetPostAnswer();
     const payload = {question: question.id, text: value}
     postAnswerTrigger(payload);
   }
-
-  console.log(question)
 
   const questionTypeComponentMapping = new Map(Object.entries({
     numeric: NumericInput,
