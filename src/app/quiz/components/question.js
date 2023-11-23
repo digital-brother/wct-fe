@@ -69,12 +69,10 @@ function Question() {
 
   let boxContent = null
 
-  if (getQuestionsError) {
-    boxContent = <ErrorDetails error={getQuestionsError}/>
-  } else if (getQuestionsIsLoading) {
-    boxContent = <BoxHeader text="Loading..."/>
+  if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
+  if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  } else if (getQuestionsData) {
+  if (getQuestionsData) {
     const question = getQuestionsData[3]
 
     function handleAnswerSubmit(value) {
@@ -90,30 +88,21 @@ function Question() {
       boolean: BooleanInput,
     }))
     const InputComponent = questionTypeComponentMapping.get(question.type)
-    if (!InputComponent) {
-      boxContent = (
-        <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
-      )
-    } else {
-      boxContent = (
-        <>
-          <BoxHeader text={question.text}/>
-          <InputComponent
-            question={question}
-            handleAnswerSubmit={handleAnswerSubmit}
-            postAnswerIsMutating={postAnswerIsMutating}
-            sx={{mt: 8}}
-          />
-          {postAnswerError &&
-            <><br/><br/><ErrorDetails error={postAnswerError}/></>
-          }
-        </>
-      )
-    }
-  }
+    if (!InputComponent) return <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
 
-  return (<>
-      {boxContent}
-    </>
-  )
+    return (
+      <>
+        <BoxHeader text={question.text}/>
+        <InputComponent
+          question={question}
+          handleAnswerSubmit={handleAnswerSubmit}
+          postAnswerIsMutating={postAnswerIsMutating}
+          sx={{mt: 8}}
+        />
+        {postAnswerError &&
+          <><br/><br/><ErrorDetails error={postAnswerError}/></>
+        }
+      </>
+    )
+  }
 }
