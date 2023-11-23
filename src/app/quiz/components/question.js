@@ -54,7 +54,6 @@ export default function Question() {
       </>
     )
   }
-  console.log(getQuestionsData);
 
   return (
     <Container maxWidth="lg" sx={{

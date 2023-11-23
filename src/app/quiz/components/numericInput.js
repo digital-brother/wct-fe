@@ -16,7 +16,7 @@ export default function NumericInput() {
     isMutating: postAnswerIsMutating,
     trigger: postAnswerTrigger,
     reset: resetPostAnswer,
-  } = useSWRMutation('answerst', postAnswer)
+  } = useSWRMutation('answers', postAnswer)
 
   const inputRef = useRef(null)
 
@@ -33,7 +33,8 @@ export default function NumericInput() {
 
         mt: "37px",
         mx: "auto",
-        width: "1048px",
+        // width: "1048px",
+        width: "100%",
         height: "111px",
 
         background: '#FAF5EF',
@@ -48,6 +49,7 @@ export default function NumericInput() {
           defaultValue="default"
           disableUnderline={true}
           inputRef={inputRef}
+          disabled={postAnswerIsMutating}
           sx={{
             width: "100%",
             fontSize: "35px",
