@@ -62,13 +62,14 @@ export default function Question() {
         <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
       )
     } else {
-    boxContent = (
-      <>
-        <BoxHeader text={question.text}/>
-        <InputComponent question={question} sx={{mt: 8}}/>
-      </>
-    )
-  }}
+      boxContent = (
+        <>
+          <BoxHeader text={question.text}/>
+          <InputComponent question={question} sx={{mt: 8}}/>
+        </>
+      )
+    }
+  }
 
   return (
     <Container maxWidth="lg" sx={{
