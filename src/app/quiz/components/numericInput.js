@@ -9,7 +9,7 @@ import {postAnswer} from "@/app/quiz/api.mjs";
 import {ErrorDetails} from "@/app/quiz/components/question";
 
 
-export default function NumericInput({question}) {
+export default function NumericInput({question, ...props}) {
   const {
     data: postAnswerData,
     error: postAnswerError,
@@ -27,11 +27,10 @@ export default function NumericInput({question}) {
   }
 
   return (
-    <>
+    <Box {...props}>
       <Box sx={{
         display: "flex",
 
-        mt: "37px",
         mx: "auto",
         // width: "1048px",
         width: "100%",
@@ -65,9 +64,10 @@ export default function NumericInput({question}) {
           <KeyboardArrowRightRoundedIcon sx={{fontSize: 55}}/>
         </IconButton>
       </Box>
+
       {postAnswerError &&
         <><br/><br/><ErrorDetails error={postAnswerError}/></>
       }
-    </>
+    </Box>
   )
 }

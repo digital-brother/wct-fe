@@ -65,7 +65,7 @@ export default function Question() {
     boxContent = (
       <>
         <BoxHeader text={question.text}/>
-        <InputComponent question={question}/>
+        <InputComponent question={question} sx={{mt: 8}}/>
       </>
     )
   }}
