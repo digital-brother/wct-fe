@@ -6,11 +6,11 @@ import React, {useRef} from "react";
 import Box from "@mui/material/Box";
 
 
-export default function NumericInput({question, handleAnswerSubmit, postAnswerIsMutating, ...props}) {
+export default function NumericInput({handleAnswerSubmit, postAnswerIsMutating, ...props}) {
   const inputRef = useRef(null)
 
   function handleSubmit() {
-    return handleAnswerSubmit(inputRef.current.value)
+    return handleAnswerSubmit({text: inputRef.current.value})
   }
 
   return (
