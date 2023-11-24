@@ -10,7 +10,7 @@ export default function NumericInput({handleAnswerSubmit, postAnswerIsMutating, 
   const inputRef = useRef(null)
 
   function handleSubmit() {
-    return handleAnswerSubmit(inputRef.current.value)
+    return handleAnswerSubmit({text: inputRef.current.value})
   }
 
   return (

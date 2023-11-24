@@ -71,11 +71,11 @@ function Question() {
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  const question = getQuestionsData[0]
+  const question = getQuestionsData[3]
 
-  function handleAnswerSubmit(value) {
+  function handleAnswerSubmit(fields) {
     resetPostAnswer();
-    const payload = {question: question.id, text: value}
+    const payload = {question: question.id, ...fields}
     postAnswerTrigger(payload);
   }
 

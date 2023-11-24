@@ -2,8 +2,11 @@ import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import UncheckedIcon from "@/assets/uncheckedIcon"
 import CheckedIcon from "@/assets/checkedIcon"
 
-export default function ChoiceInput({question, ...props}) {
-  console.log(question)
+export default function ChoiceInput({question, handleAnswerSubmit, postAnswerIsMutating}) {
+  function handleSubmit(value) {
+    handleAnswerSubmit({choice: value})
+  }
+
   return (
     <FormControl sx={{mt: 5}}>
       <RadioGroup
@@ -14,12 +17,18 @@ export default function ChoiceInput({question, ...props}) {
         {question.choices.map(choice => (
           <FormControlLabel
             value={choice.id}
-            control={<Radio icon={<UncheckedIcon/>} checkedIcon={<CheckedIcon/>} sx={{
-              '& .MuiSvgIcon-root': {
-                fontSize: 60,
-              },
-            }}
-            />}
+            control={
+              <Radio
+                icon={<UncheckedIcon/>}
+                checkedIcon={<CheckedIcon/>}
+                onClick={() => handleSubmit(choice.id)}
+                sx={{
+                  '& .MuiSvgIcon-root': {
+                    fontSize: 60,
+                  },
+                }}
+              />
+            }
             label={choice.text}
 
             componentsProps={{
