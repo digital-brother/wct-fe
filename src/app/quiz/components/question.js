@@ -72,7 +72,6 @@ function Question() {
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
   const question = getQuestionsData[0]
-  console.log(question)
 
   function handleAnswerSubmit(value) {
     resetPostAnswer();

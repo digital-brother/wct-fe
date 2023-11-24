@@ -31,7 +31,7 @@ function BooleanButton({label, onClick, ...props}) {
   )
 }
 
-export default function BooleanInput({question, handleAnswerSubmit, postAnswerIsMutating, ...props}) {
+export default function BooleanInput({handleAnswerSubmit, postAnswerIsMutating, ...props}) {
   return (
     <Box {...props}>
       <BooleanButton label="Yes" mr={3} onClick={() => handleAnswerSubmit("true")}/>
