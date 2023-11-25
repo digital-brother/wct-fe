@@ -9,6 +9,7 @@ import useSWR from "swr";
 import BooleanInput from "@/app/quiz/components/booleanInput";
 import useSWRMutation from "swr/mutation";
 import ChoiceInput from "@/app/quiz/components/choiceInput";
+import CheckboxChoiceInput from "@/app/quiz/components/checkboxChoiceInput";
 
 export default function QuestionBox() {
   return (
@@ -83,6 +84,7 @@ function Question() {
     numeric: NumericInput,
     boolean: BooleanInput,
     choice: ChoiceInput,
+    checkbox: CheckboxChoiceInput,
   }))
   const InputComponent = questionTypeComponentMapping.get(question.type)
   if (!InputComponent) return <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
