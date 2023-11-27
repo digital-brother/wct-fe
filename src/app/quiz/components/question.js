@@ -8,8 +8,8 @@ import NumericInput from "@/app/quiz/components/numericInput";
 import useSWR from "swr";
 import BooleanInput from "@/app/quiz/components/booleanInput";
 import useSWRMutation from "swr/mutation";
-import ChoiceInput from "@/app/quiz/components/choiceInput";
 import CheckboxChoiceInput from "@/app/quiz/components/checkboxChoiceInput";
+import RadioInput from "@/app/quiz/components/radioInput";
 
 export default function QuestionBox() {
   return (
@@ -72,7 +72,7 @@ function Question() {
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  const question = getQuestionsData[3]
+  const question = getQuestionsData[0]
 
   function handleAnswerSubmit(fields) {
     resetPostAnswer();
@@ -83,7 +83,7 @@ function Question() {
   const questionTypeComponentMapping = new Map(Object.entries({
     numeric: NumericInput,
     boolean: BooleanInput,
-    choice: ChoiceInput,
+    radio: RadioInput,
     checkbox: CheckboxChoiceInput,
   }))
   const InputComponent = questionTypeComponentMapping.get(question.type)
