@@ -20,7 +20,7 @@ function ChoiceVariantButton({ choice, question }) {
 
   function handleClick() {
     // check checkbox status
-    setBgColor("#fbf5bf")
+    // setBgColor("#fbf5bf")
   }
 
   return (
@@ -34,7 +34,7 @@ function ChoiceVariantButton({ choice, question }) {
             '& .MuiSvgIcon-root': {
               fontSize: 60,
             },
-            display: "none"
+            // display: "none"
           }}
         />
       }
@@ -42,12 +42,11 @@ function ChoiceVariantButton({ choice, question }) {
       labelPlacement="end"
       sx={{
         backgroundColor: bgColor,
-        padding: "25px",
-        borderRadius: "5px",
-        margin: "5px",
+        padding: 3,
+        borderRadius: 1,
+        margin: 1,
         textAlign: "center",
         border: "none",
-        visibile: "none"
       }}
 
       componentsProps={{
@@ -82,6 +81,22 @@ export default function CheckboxChoiceInput({question, handleAnswerSubmit, postA
 
         </Grid>
       </FormGroup>
+      <Button
+        variant="contained"
+        color="success"
+        sx={{
+          mx: 1,
+          mt: 5,
+          p: 3,
+          fontSize: 40,
+          fontWeight: 600,
+        }}
+        onClick={() => {
+          alert("Sending data");
+        }}
+      >
+        Send data
+      </Button>
     </FormControl>
   );
 }
