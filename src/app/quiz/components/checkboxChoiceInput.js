@@ -16,11 +16,11 @@ const post_fetcher = (...args) => fetch(...args).then(res => res.json())
 
 function ChoiceVariantButton({ choice, question }) {
 
-  const [bgColor, setBgColor] = useState("#fbf5ef");
+  const [bgColor, setBgColor] = useState("#FAF5EF");
 
-  function handleClick() {
+  function handleClick(e, data) {
     // check checkbox status
-    // setBgColor("#fbf5bf")
+    setBgColor("#D7AF7F")
   }
 
   return (
@@ -28,15 +28,7 @@ function ChoiceVariantButton({ choice, question }) {
       value={choice.id}
       onClick={handleClick}
       control={
-        <Checkbox
-          // onClick={() => handleSubmit(choice.id)}
-          sx={{
-            '& .MuiSvgIcon-root': {
-              fontSize: 60,
-            },
-            // display: "none"
-          }}
-        />
+        <Checkbox sx={{ display: "none" }} />
       }
       label={choice.text}
       labelPlacement="end"
@@ -44,17 +36,28 @@ function ChoiceVariantButton({ choice, question }) {
         backgroundColor: bgColor,
         padding: 3,
         borderRadius: 1,
-        margin: 1,
         textAlign: "center",
         border: "none",
+        width: "100%",
+        mx: 0,
+
+        borderRadius: "5px",
+        height: 118,
+        flexShrink: 0,
       }}
 
       componentsProps={{
         typography: {
           sx: {
-            ml: 2,
-            fontSize: 40,
-            fontWeight: 700,
+            color: "#08202F",
+            align: "center",
+            fontFamily: "Lora",
+            fontSize: 20,
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+
+            // ml: 2,
           }
         }
       }}
@@ -68,13 +71,12 @@ export default function CheckboxChoiceInput({question, handleAnswerSubmit, postA
     handleAnswerSubmit({choice: value})
   }
 
-  // temporary solution for display in 2 columns
   return (
     <FormControl sx={{mt: 5}}>
-      <FormGroup aria-label="position" row>
+      <FormGroup row>
         <Grid container spacing={2} >
         {question.choices.map(choice => (
-          <Grid container item xs={6} direction="column" >
+          <Grid container item xs={6} direction="row">
             <ChoiceVariantButton choice={ choice } question={ question } />
           </Grid>
         ))}
@@ -85,15 +87,13 @@ export default function CheckboxChoiceInput({question, handleAnswerSubmit, postA
         variant="contained"
         color="success"
         sx={{
-          mx: 1,
           mt: 5,
-          p: 3,
-          fontSize: 40,
-          fontWeight: 600,
+          // p: 3,
+          fontSize: 20,
+          height: 118,
+          fontWeight: 500,
         }}
-        onClick={() => {
-          alert("Sending data");
-        }}
+        onClick={handleSubmit}
       >
         Send data
       </Button>
