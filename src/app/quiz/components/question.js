@@ -81,6 +81,7 @@ function Question() {
 
   const questionTypeComponentMapping = new Map(Object.entries({
     numeric: NumericInput,
+    text: NumericInput,
     boolean: BooleanInput,
     radio: RadioInput,
   }))
