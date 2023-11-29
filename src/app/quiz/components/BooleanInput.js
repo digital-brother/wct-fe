@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import {Button} from "@mui/material";
 import React from "react";
 
-function BooleanButton({label, onClick, ...props}) {
+export function BooleanButton({children, onClick, sx}) {
   return (
     <Button onClick={onClick} sx={{
       width: '172.74px',
@@ -15,18 +15,18 @@ function BooleanButton({label, onClick, ...props}) {
       fontSize: 32.59,
       fontFamily: 'Fahkwang',
 
-      color: "#121211",
-      bgcolor: "#FFFFFF",
+      bgcolor: "#1F4934",
+      color: "#FFFFFF",
 
       "&:hover": {
-        bgcolor: "#1F4934",
-        color: "#FFFFFF",
+        bgcolor: "#FFFFFF",
+        color: "#121211",
       },
 
       textTransform: 'none',
-      ...props,
+      ...sx,
     }}>
-      {label}
+      {children}
     </Button>
   )
 }
@@ -38,8 +38,8 @@ export default function BooleanInput({handleAnswerSubmit, postAnswerIsMutating, 
 
   return (
     <Box {...props}>
-      <BooleanButton label="Yes" mr={3} onClick={() => handleSubmit("true")}/>
-      <BooleanButton label="No" onClick={() => handleSubmit("false")}/>
+      <BooleanButton sx={{mr: 3}} onClick={() => handleSubmit("true")}>Yes</BooleanButton>
+      <BooleanButton onClick={() => handleSubmit("false")}>No</BooleanButton>
     </Box>
   )
 }
