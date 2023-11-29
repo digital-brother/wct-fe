@@ -69,10 +69,19 @@ function ChoiceVariantButton({ choice, question }) {
 export default function CheckboxChoiceInput({question, handleAnswerSubmit, postAnswerIsMutating}) {
   function handleSubmit(value) {
     handleAnswerSubmit({choice: value})
+  function handleSubmit(event, data) {
+    console.log(event)
+    console.log(data)
+    const formData = new FormData(event.currentTarget);
+    const selectedOptions = formData.getAll("options");
+    console.log(selectedOptions)
+
+    handleAnswerSubmit({choice: data})
+    // Using FormData to collect checkbox values
   }
 
   return (
-    <FormControl sx={{mt: 5}}>
+    <FormControl sx={{mt: 5}} onSubmit={handleSubmit}>
       <FormGroup row>
         <Grid container spacing={2} >
         {question.choices.map(choice => (
@@ -86,6 +95,7 @@ export default function CheckboxChoiceInput({question, handleAnswerSubmit, postA
       <Button
         variant="contained"
         color="success"
+        type="submit"
         sx={{
           mt: 5,
           // p: 3,
@@ -93,7 +103,6 @@ export default function CheckboxChoiceInput({question, handleAnswerSubmit, postA
           height: 118,
           fontWeight: 500,
         }}
-        onClick={handleSubmit}
       >
         Send data
       </Button>
