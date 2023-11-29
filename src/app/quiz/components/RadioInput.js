@@ -1,6 +1,6 @@
 import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
-import UncheckedIcon from "@/assets/uncheckedIcon"
-import CheckedIcon from "@/assets/checkedIcon"
+import UncheckedIcon from "@/assets/UncheckedIcon"
+import CheckedIcon from "@/assets/CheckedIcon"
 
 export default function RadioInput({question, handleAnswerSubmit, postAnswerIsMutating}) {
   function handleSubmit(value) {

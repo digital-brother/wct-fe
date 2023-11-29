@@ -4,12 +4,13 @@ import Container from "@mui/material/Container";
 import {Typography} from "@mui/material";
 import {getQuestions, postAnswer} from "@/app/quiz/api";
 import React from "react";
-import NumericInput from "@/app/quiz/components/numericInput";
+import NumericInput from "@/app/quiz/components/NumericInput";
 import useSWR from "swr";
-import BooleanInput from "@/app/quiz/components/booleanInput";
+import BooleanInput from "@/app/quiz/components/BooleanInput";
 import useSWRMutation from "swr/mutation";
-import CheckboxChoiceInput from "@/app/quiz/components/checkboxChoiceInput";
-import RadioInput from "@/app/quiz/components/radioInput";
+import RadioInput from "@/app/quiz/components/RadioInput";
+import CheckboxInput from "@/app/quiz/components/ChoiceInput";
+import Box from "@mui/material/Box";
 
 export default function QuestionBox() {
   return (
@@ -72,7 +73,8 @@ function Question() {
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  const question = getQuestionsData[0]
+  console.log(getQuestionsData);
+  const question = getQuestionsData.find(question => question.id === 27);
 
   function handleAnswerSubmit(fields) {
     resetPostAnswer();
@@ -82,15 +84,16 @@ function Question() {
 
   const questionTypeComponentMapping = new Map(Object.entries({
     numeric: NumericInput,
+    text: NumericInput,
     boolean: BooleanInput,
     radio: RadioInput,
-    checkbox: CheckboxChoiceInput,
+    checkbox: CheckboxInput,
   }))
   const InputComponent = questionTypeComponentMapping.get(question.type)
   if (!InputComponent) return <ErrorDetails error={{message: `Unknown question type: ${question.type}`}}/>
 
   return (
-    <>
+    <Box sx={{px: 9}}>
       <BoxHeader text={question.text}/>
       <InputComponent
         question={question}
@@ -101,6 +104,6 @@ function Question() {
       {postAnswerError &&
         <><br/><br/><ErrorDetails error={postAnswerError}/></>
       }
-    </>
+    </Box>
   )
 }
