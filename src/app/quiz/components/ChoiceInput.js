@@ -41,12 +41,12 @@ export function Choice({choice}) {
 
 export default function CheckboxInput({question, handleAnswerSubmit}) {
   const formRef = useRef(null);
-  const choices = question.choices.slice(0, 5)
+  const choices = question.choices
 
   const handleSubmit = () => {
     const formData = new FormData(formRef.current);
     const selectedChoices = formData.getAll(CHOICES_FIELD_NAME)
-    handleAnswerSubmit({choice: selectedChoices[0]})
+    handleAnswerSubmit({choices: selectedChoices})
   };
 
   return (
