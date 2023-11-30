@@ -2,7 +2,7 @@
 
 import Container from "@mui/material/Container";
 import {Typography} from "@mui/material";
-import {getQuestions, postAnswer} from "@/app/quiz/api";
+import {getQuestions, getNextQuestion, postAnswer} from "@/app/quiz/api";
 import React from "react";
 import NumericInput from "@/app/quiz/components/NumericInput";
 import useSWR from "swr";
@@ -57,10 +57,10 @@ export function ErrorDetails({error}) {
 
 function Question() {
   const {
-    data: getQuestionsData,
-    error: getQuestionsError,
-    isLoading: getQuestionsIsLoading
-  } = useSWR('questions', getQuestions)
+    data: getNextQuestionData,
+    error: getNextQuestionError,
+    isLoading: getNextQuestionIsLoading,
+  } = useSWR('next-question', getNextQuestion)
 
   const {
     data: postAnswerData,
@@ -68,14 +68,12 @@ function Question() {
     isMutating: postAnswerIsMutating,
     trigger: postAnswerTrigger,
     reset: resetPostAnswer,
-  } = useSWRMutation('answers', postAnswer)
+  } = useSWRMutation('next-question', postAnswer)
 
-  if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
-  if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
+  if (getNextQuestionError) return <ErrorDetails error={getNextQuestionError}/>
+  if (getNextQuestionIsLoading) return <BoxHeader text="Loading..."/>
 
-  console.log(getQuestionsData);
-  const question = getQuestionsData.find(question => question.id === 27);
-
+  const question = getNextQuestionData;
   function handleAnswerSubmit(fields) {
     resetPostAnswer();
     const payload = {question: question.id, ...fields}
