@@ -2,16 +2,26 @@ import axios from 'axios'
 
 const API_HOST = 'http://localhost:8000/api/v1';
 const QUESTIONS_PATH = '/quiz/questions/';
+const NEXT_QUESTION_PATH = '/quiz/next-question/';
 const ANSWERS_PATH = '/quiz/answers/';
 
 const client = axios.create({
   baseURL: API_HOST,
   withCredentials: true,
   timeout: 1000,
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer BearerTokenValue",
+  },
 });
 
 export async function getQuestions() {
   const response = await client.get(QUESTIONS_PATH);
+  return response.data;
+}
+
+export async function getNextQuestion() {
+  const response = await client.get(NEXT_QUESTION_PATH);
   return response.data;
 }
 
