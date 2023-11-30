@@ -7,18 +7,20 @@ import LandingHealthier from "@/app/landing/landing-healthier";
 import LandingWelcome from "@/app/landing/landing-welcome";
 import LandingHowItWorks from "@/app/landing/landing-howitworks";
 import LandingPremiumQuality from "@/app/landing/landing-premiumquality";
+import LandingSatisfiedSupplement from "@/app/landing/landing-satisfiedsupplement";
 
 export default function HomePage() {
     return (
         <Box>
-            <LandingHeader/>
-            <LandingTitle/>
-            <LandingDifference/>
-            <LandingMedia/>
-            <LandingHealthier/>
-            <LandingWelcome/>
-            <LandingHowItWorks/>
-            <LandingPremiumQuality/>
+            {/*<LandingHeader/>*/}
+            {/*<LandingTitle/>*/}
+            {/*<LandingDifference/>*/}
+            {/*<LandingMedia/>*/}
+            {/*<LandingHealthier/>*/}
+            {/*<LandingWelcome/>*/}
+            {/*<LandingHowItWorks/>*/}
+            {/*<LandingPremiumQuality/>*/}
+            <LandingSatisfiedSupplement/>
         </Box>
     );
 }
