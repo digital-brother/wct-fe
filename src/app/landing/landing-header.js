@@ -2,10 +2,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Logo from "public/images/logo.svg";
-import {Lora} from '@next/font/google';
 import Image from "next/image";
-
-const lora = Lora({preload: false});
 
 export default function LandingHeader() {
   return (
@@ -24,13 +21,13 @@ export default function LandingHeader() {
       }}>
         <Image src={Logo} alt="Logo" width={321} height={64} style={{display: "block"}}/>
 
-        <Button className={lora.className} sx={{
+        <Button sx={{
           width: 220,
           height: 55,
           borderRadius: 32.5,
           backgroundColor: "#1F4934",
           verticalAlign: "inherit",
-          fontFamily: "'__Lora_c952f4', '__Lora_Fallback_c952f4'",
+          fontFamily: "Lora",
           color: "white",
           fontSize: 18,
           fontWeight: 700,

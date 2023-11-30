@@ -1,8 +1,5 @@
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import {Lora} from '@next/font/google';
-
-const lora = Lora({preload: false});
 
 export default function LandingHowItWorks() {
     return (
@@ -136,13 +133,13 @@ export default function LandingHowItWorks() {
             <Box style={{display: "flex",
                 justifyContent: "center",
                 marginTop: "30px",}}>
-                <Button className={lora.className} sx={{
+                <Button sx={{
                 width: 220,
                 height: 55,
                 borderRadius: 32.5,
                 backgroundColor: "#1F4934",
                 verticalAlign: "inherit",
-                fontFamily: "'__Lora_c952f4', '__Lora_Fallback_c952f4'",
+                fontFamily: "Lora",
                 color: "white",
                 fontSize: 18,
                 fontWeight: 700,
