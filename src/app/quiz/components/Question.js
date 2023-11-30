@@ -2,10 +2,10 @@
 
 import Container from "@mui/material/Container";
 import {Typography} from "@mui/material";
-import {getQuestions, postAnswer} from "@/app/quiz/api";
+import {getNextQuestion, postAnswer} from "@/app/quiz/api";
 import React from "react";
 import NumericInput from "@/app/quiz/components/NumericInput";
-import useSWR from "swr";
+import useSWR, {mutate} from "swr";
 import BooleanInput from "@/app/quiz/components/BooleanInput";
 import useSWRMutation from "swr/mutation";
 import RadioInput from "@/app/quiz/components/RadioInput";
@@ -60,7 +60,7 @@ function Question() {
     data: getQuestionsData,
     error: getQuestionsError,
     isLoading: getQuestionsIsLoading
-  } = useSWR('questions', getQuestions)
+  } = useSWR('question', getNextQuestion)
 
   const {
     data: postAnswerData,
@@ -73,13 +73,12 @@ function Question() {
   if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
   if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
 
-  console.log(getQuestionsData);
   const question = getQuestionsData.find(question => question.id === 27);
-
-  function handleAnswerSubmit(fields) {
+  async function handleAnswerSubmit(fields) {
     resetPostAnswer();
     const payload = {question: question.id, ...fields}
-    postAnswerTrigger(payload);
+    const response = await postAnswerTrigger(payload);
+    await mutate('question', response.next_question, false);
   }
 
   const questionTypeComponentMapping = new Map(Object.entries({
