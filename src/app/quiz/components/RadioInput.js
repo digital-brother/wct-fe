@@ -4,7 +4,7 @@ import CheckedIcon from "@/assets/CheckedIcon"
 
 export default function RadioInput({question, handleAnswerSubmit, postAnswerIsMutating}) {
   function handleSubmit(value) {
-    handleAnswerSubmit({choice: value})
+    handleAnswerSubmit({choices: [value]})
   }
 
   return (
