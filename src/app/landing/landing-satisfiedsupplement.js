@@ -46,7 +46,7 @@ export default function LandingSatisfiedSupplement() {
                         marginBottom: "20px",
                     }}>Dr Menka Gupta completely fixed all my gut issues.  I went to see her as I was suffering from anxiety and chronic tiredness for a long time. Rather than trying to find a quick fix for my symptoms, she patiently tried to understand the root cause of my health</span>
                     <Box sx={{display: "flex", justifyContent: "center"}}>
-                        <Image src={monika} alt="Logo" width={100} height={75} style={{borderRadius: "100%", marginRight: "30px"}}/>
+                        <Image src={monika} alt="Logo" width={85} height={75} style={{borderRadius: "100%", marginRight: "30px"}}/>
                         <Box sx={{display: "flex",
                             flexDirection: "column",
                             justifyContent: "center"}}>
@@ -64,6 +64,7 @@ export default function LandingSatisfiedSupplement() {
                                     fontWeight: 400,
                                     lineHeight: "11px",
                                     letterSpacing: "0px",
+                                    marginRight: "10px"
                                 }}>Microblading</span>
                                 <Image src={arrow} alt="Logo" width={12} height={10}/>
                             </Box>
@@ -75,11 +76,11 @@ export default function LandingSatisfiedSupplement() {
                     flexDirection: "column", background: "#F6DAB4", padding: "40px", justifyContent: "center", width: "600px"}}>
                     <span style={{
                         fontFamily: "Lora",
-                        fontSize: "20px",
+                        fontSize: "19px",
                         fontWeight: 700,
                         lineHeight: "34px",
                         letterSpacing: "0px",
-                        marginBottom: "10px",
+                        marginBottom: "40px",
                     }}>Big thanks to both Dr Menka and Dr Dipika for helping me 😊</span>
                     <span style={{
                         fontFamily: "Lora",
@@ -90,7 +91,7 @@ export default function LandingSatisfiedSupplement() {
                         marginBottom: "20px",
                     }}>I have worked very successfully with Dr Menka in lowering my cholesterol and understanding more about the best foods for me. I appreciate her dept of knowledge from both a medical and functional stance.</span>
                     <Box sx={{display: "flex", justifyContent: "center"}}>
-                        <Image src={veronika} alt="Logo" width={100} height={75} style={{borderRadius: "100%", marginRight: "30px"}} />
+                        <Image src={veronika} alt="Logo" width={85} height={75} style={{borderRadius: "100%", marginRight: "30px"}} />
                         <Box sx={{display: "flex",
                             flexDirection: "column",
                             justifyContent: "center"}}>
@@ -115,6 +116,25 @@ export default function LandingSatisfiedSupplement() {
                         </Box>
                     </Box>
                 </Box>
+            </Box>
+            <Box sx={{display: "flex", marginBottom: "50px"}}>
+                <Box sx={{width: "15px",
+                    height: "15px",
+                    background: "#ADBBC4",
+                    borderRadius: "100%",
+                    marginRight: "5px"
+                }}/>
+                <Box sx={{width: "50px",
+                    height: "15px",
+                    borderRadius: "11px",
+                    background: "#1F4934",
+                    marginRight: "5px",
+                }}/>
+                <Box sx={{width: "15px",
+                    height: "15px",
+                    background: "#ADBBC4",
+                    borderRadius: "100%"
+                }}/>
             </Box>
             <Button sx={{
                 width: 220,
