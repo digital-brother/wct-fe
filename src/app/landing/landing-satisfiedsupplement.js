@@ -36,6 +36,7 @@ export default function LandingSatisfiedSupplement() {
                         lineHeight: "34px",
                         letterSpacing: "0px",
                         marginBottom: "10px",
+                        textAlign: "center",
                     }}>Dr Menka Gupta completely fixed all my gut issues I went to see her as I was suffering</span>
                     <span style={{
                         fontFamily: "Lora",
@@ -44,6 +45,7 @@ export default function LandingSatisfiedSupplement() {
                         lineHeight: "18px",
                         letterSpacing: "0px",
                         marginBottom: "20px",
+                        textAlign: "center",
                     }}>Dr Menka Gupta completely fixed all my gut issues.  I went to see her as I was suffering from anxiety and chronic tiredness for a long time. Rather than trying to find a quick fix for my symptoms, she patiently tried to understand the root cause of my health</span>
                     <Box sx={{display: "flex", justifyContent: "center"}}>
                         <Image src={monika} alt="Logo" width={85} height={75} style={{borderRadius: "100%", marginRight: "30px"}}/>
@@ -80,6 +82,7 @@ export default function LandingSatisfiedSupplement() {
                         fontWeight: 700,
                         lineHeight: "34px",
                         letterSpacing: "0px",
+                        textAlign: "center",
                         marginBottom: "40px",
                     }}>Big thanks to both Dr Menka and Dr Dipika for helping me 😊</span>
                     <span style={{
@@ -88,6 +91,7 @@ export default function LandingSatisfiedSupplement() {
                         fontWeight: 400,
                         lineHeight: "18px",
                         letterSpacing: "0px",
+                        textAlign: "center",
                         marginBottom: "20px",
                     }}>I have worked very successfully with Dr Menka in lowering my cholesterol and understanding more about the best foods for me. I appreciate her dept of knowledge from both a medical and functional stance.</span>
                     <Box sx={{display: "flex", justifyContent: "center"}}>
