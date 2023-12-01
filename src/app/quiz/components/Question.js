@@ -57,23 +57,21 @@ export function ErrorDetails({error}) {
 
 function Question() {
   const {
-    data: getQuestionsData,
-    error: getQuestionsError,
-    isLoading: getQuestionsIsLoading
+    data: question,
+    error: getQuestionError,
+    isLoading: questionIsLoading
   } = useSWR('question', getNextQuestion)
 
   const {
-    data: postAnswerData,
     error: postAnswerError,
     isMutating: postAnswerIsMutating,
     trigger: postAnswerTrigger,
     reset: resetPostAnswer,
   } = useSWRMutation('answers', postAnswer)
 
-  if (getQuestionsError) return <ErrorDetails error={getQuestionsError}/>
-  if (getQuestionsIsLoading) return <BoxHeader text="Loading..."/>
+  if (getQuestionError) return <ErrorDetails error={getQuestionError}/>
+  if (questionIsLoading) return <BoxHeader text="Loading..."/>
 
-  const question = getQuestionsData.find(question => question.id === 27);
   async function handleAnswerSubmit(fields) {
     resetPostAnswer();
     const payload = {question: question.id, ...fields}
