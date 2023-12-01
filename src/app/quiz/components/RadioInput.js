@@ -1,14 +1,23 @@
-import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
-import UncheckedIcon from "@/assets/UncheckedIcon"
-import CheckedIcon from "@/assets/CheckedIcon"
+import {
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+} from "@mui/material";
+import UncheckedIcon from "@/assets/UncheckedIcon";
+import CheckedIcon from "@/assets/CheckedIcon";
 
-export default function RadioInput({question, handleAnswerSubmit, postAnswerIsMutating}) {
+export default function RadioInput({
+  question,
+  handleAnswerSubmit,
+  postAnswerIsMutating,
+}) {
   function handleSubmit(value) {
-    handleAnswerSubmit({choices: [value]})
+    handleAnswerSubmit({ choices: [value] });
   }
 
   return (
-    <FormControl sx={{mt: 5}}>
+    <FormControl sx={{ mt: 5 }}>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="female"
@@ -20,30 +29,29 @@ export default function RadioInput({question, handleAnswerSubmit, postAnswerIsMu
             value={choice.id}
             control={
               <Radio
-                icon={<UncheckedIcon/>}
-                checkedIcon={<CheckedIcon/>}
+                icon={<UncheckedIcon />}
+                checkedIcon={<CheckedIcon />}
                 onClick={() => handleSubmit(choice.id)}
                 sx={{
-                  '& .MuiSvgIcon-root': {
+                  "& .MuiSvgIcon-root": {
                     fontSize: 60,
                   },
                 }}
               />
             }
             label={choice.text}
-
             componentsProps={{
               typography: {
                 sx: {
                   ml: 2,
                   fontSize: 40,
                   fontWeight: 700,
-                }
-              }
+                },
+              },
             }}
           />
         ))}
       </RadioGroup>
     </FormControl>
-  )
+  );
 }
