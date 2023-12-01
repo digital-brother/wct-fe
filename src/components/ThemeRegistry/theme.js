@@ -34,6 +34,10 @@ const theme = createTheme({
         }),
       },
     },
+
+    quiz: {
+      // add styles with breakpoints here?
+    },
   },
 });
 
