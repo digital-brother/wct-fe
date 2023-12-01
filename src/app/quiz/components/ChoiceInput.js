@@ -52,8 +52,8 @@ export default function CheckboxInput({question, handleAnswerSubmit}) {
   return (
     <Box component={"form"} ref={formRef} sx={{mt: 5}}>
       <Grid container rowSpacing={1} columnSpacing={2} sx={{textAlign: "center"}}>
-        {choices.map((choice) => (
-          <Grid item xs={6}>
+        {choices.map((choice, index) => (
+          <Grid key={index} item xs={6}>
             <Choice choice={choice}/>
           </Grid>
         ))}

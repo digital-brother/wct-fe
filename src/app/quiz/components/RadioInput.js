@@ -14,8 +14,9 @@ export default function RadioInput({question, handleAnswerSubmit, postAnswerIsMu
         defaultValue="female"
         name="radio-buttons-group"
       >
-        {question.choices.map(choice => (
+        {question.choices.map((choice, index) => (
           <FormControlLabel
+            key={index}
             value={choice.id}
             control={
               <Radio
