@@ -7,11 +7,21 @@ export function BooleanButton({ children, onClick, sx }) {
     <Button
       onClick={onClick}
       sx={{
-        width: "172.74px",
-        height: "88px",
+        width: {
+          xs: "105px",
+          sm: "172.74px",
+        },
+        height: {
+          xs: "70px",
+          sm: "88px",
+        },
 
         border: "1.09px #B0835F solid",
-        borderRadius: 54.32,
+        borderRadius: {
+          xs: 12.32,
+          sm: 35.32,
+          lg: 54.32,
+        },
 
         fontWeight: 500,
         fontSize: 32.59,
@@ -44,8 +54,8 @@ export default function BooleanInput({
   }
 
   return (
-    <Box {...props}>
-      <BooleanButton sx={{ mr: 3 }} onClick={() => handleSubmit("true")}>
+    <Box {...props} sx={{ mt: {xs: 3, sm: 8 } }}>
+      <BooleanButton sx={{ mr: {xs: 1, sm: 3} }} onClick={() => handleSubmit("true")}>
         Yes
       </BooleanButton>
       <BooleanButton onClick={() => handleSubmit("false")}>No</BooleanButton>
