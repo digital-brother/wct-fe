@@ -17,7 +17,7 @@ export default function RadioInput({
   }
 
   return (
-    <FormControl sx={{ mt: 5 }}>
+    <FormControl sx={{ mt: {xs: 2, lg: 4, lx: 5} }}>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="female"
@@ -43,9 +43,13 @@ export default function RadioInput({
             componentsProps={{
               typography: {
                 sx: {
-                  ml: 2,
+                  ml: {
+                    xs: 1.2,
+                    lg: 2,
+                  },
                   fontSize: 40,
                   fontWeight: 700,
+                  textAlign: "left",
                 },
               },
             }}

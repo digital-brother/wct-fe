@@ -17,23 +17,42 @@ export default function NumericInput({
   }
 
   return (
-    <Box {...props}>
+    <Box {...props} sx={{ mt: {xs: 3, sm: 5, md: 8 } }}>
       <Box
         sx={{
           display: "flex",
 
           mx: "auto",
-          // width: "1048px",
           width: "100%",
-          height: "111px",
+          height: {
+            xs: "50px",
+            sm: "75px",
+            md: "111px",
+          },
+
 
           background: "#FAF5EF",
           border: "3px white solid",
-          borderRadius: "54.32px",
+          borderRadius: {
+            xs: "35px",
+            sm: "54.32px",
+          },
 
-          pl: "50px",
-          pr: "32.59px",
-          py: "21.73px",
+          pl: {
+            xs: "15px",
+            sm: "25px",
+            md: "50px",
+          },
+          pr: {
+            xs: "10px",
+            sm: "25px",
+            md: "32.59px",
+          },
+          py: {
+            xs: "5px",
+            sm: "10px",
+            md: "21.73px",
+          }
         }}
       >
         <Input
@@ -49,8 +68,8 @@ export default function NumericInput({
         <IconButton
           onClick={handleSubmit}
           sx={{
-            width: 66,
-            height: 66,
+            width: { xs: 36, sm: 50, md: 66 },
+            height: { xs: 36, sm: 50, md: 66 },
             color: "#FFFFFF",
             bgcolor: "#1F4934",
             "&:hover": { bgcolor: "#367556" },

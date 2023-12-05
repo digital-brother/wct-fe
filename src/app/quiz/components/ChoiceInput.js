@@ -50,7 +50,7 @@ export default function CheckboxInput({ question, handleAnswerSubmit }) {
   };
 
   return (
-    <Box component={"form"} ref={formRef} sx={{ mt: 5 }}>
+    <Box component={"form"} ref={formRef} sx={{ mt: {xs: 2, lg: 4, lx: 5} }}>
       <Grid
         container
         rowSpacing={1}
@@ -58,12 +58,12 @@ export default function CheckboxInput({ question, handleAnswerSubmit }) {
         sx={{ textAlign: "center" }}
       >
         {choices.map((choice, index) => (
-          <Grid key={index} item xs={6}>
+          <Grid key={index} item xs={12} sm={6}>
             <Choice choice={choice} />
           </Grid>
         ))}
       </Grid>
-      <BooleanButton onClick={handleSubmit} sx={{ mt: 5 }}>
+      <BooleanButton onClick={handleSubmit} sx={{ mt: {xs: 2, lg: 4, lx: 5} }}>
         Submit
       </BooleanButton>
     </Box>

@@ -11,20 +11,35 @@ import useSWRMutation from "swr/mutation";
 import RadioInput from "@/app/quiz/components/RadioInput";
 import CheckboxInput from "@/app/quiz/components/ChoiceInput";
 import Box from "@mui/material/Box";
+import { useTheme } from '@mui/material/styles';
 
 export default function QuestionBox() {
+  const theme = useTheme();
   return (
     <Container
       maxWidth="lg"
       sx={{
-        background: "#F1E4DB",
+        background: theme.palette.quiz.container.backgroundColor,
         borderRadius: "25px",
         border: `2px solid white`,
         boxShadow: "0px 20px 50px rgba(209, 178, 114, 0.25)",
-        pt: "83px",
-        pl: "97px",
-        pr: "105px",
-        pb: "59px",
+        pt: {
+          xs: "43px",
+          lg: "83px",
+        },
+        pl: {
+          xs: "17px",
+          lg: "97px",
+        },
+        pr: {
+          xs: "25px",
+          lg: "105px",
+        },
+        pb: {
+          xs: "19px",
+          lg: "59px",
+        },
+        width: "90%",
         textAlign: "center",
       }}
     >
@@ -104,7 +119,7 @@ function Question() {
     );
 
   return (
-    <Box sx={{ px: 9 }}>
+    <Box sx={{ px: {xs: 1, sm: 3, md: 5, lx: 9} }}>
       <BoxHeader text={question.text} />
       <InputComponent
         question={question}
