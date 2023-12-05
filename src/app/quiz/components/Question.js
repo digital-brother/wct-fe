@@ -55,11 +55,6 @@ function BoxHeader({ text }) {
       sx={{
         fontWeight: "bold",
         textAlign: "center",
-        fontSize: {
-          xs: 28,
-          md: 36,
-          lg: 48,
-        },
       }}
     >
       {text}

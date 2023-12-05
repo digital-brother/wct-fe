@@ -7,14 +7,8 @@ export function BooleanButton({ children, onClick, sx }) {
     <Button
       onClick={onClick}
       sx={{
-        width: {
-          xs: "105px",
-          sm: "172.74px",
-        },
-        height: {
-          xs: "70px",
-          sm: "88px",
-        },
+        width: "172.74px",
+        height: "88px",
 
         border: "1.09px #B0835F solid",
         borderRadius: {

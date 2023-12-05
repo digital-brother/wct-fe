@@ -23,7 +23,6 @@ export default function NumericInput({
           display: "flex",
 
           mx: "auto",
-          // width: "1048px",
           width: "100%",
           height: {
             xs: "50px",
@@ -63,15 +62,7 @@ export default function NumericInput({
           disabled={postAnswerIsMutating}
           sx={{
             width: "100%",
-            fontSize: {
-              xs: "20px",
-              sm: "28px",
-              md: "35px",
-            },
-            fontWeight: {
-              xs: 500,
-              sm: 300,
-            },
+            fontSize: "35px",
           }}
         />
         <IconButton
@@ -84,7 +75,7 @@ export default function NumericInput({
             "&:hover": { bgcolor: "#367556" },
           }}
         >
-          <KeyboardArrowRightRoundedIcon sx={{ fontSize: { xs: 35, sm: 55 } }} />
+          <KeyboardArrowRightRoundedIcon sx={{ fontSize: 55 }} />
         </IconButton>
       </Box>
     </Box>

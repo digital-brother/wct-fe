@@ -34,11 +34,7 @@ export default function RadioInput({
                 onClick={() => handleSubmit(choice.id)}
                 sx={{
                   "& .MuiSvgIcon-root": {
-                    fontSize: {
-                      xs: 30,
-                      xs: 40,
-                      lg: 60,
-                    },
+                    fontSize: 60,
                   },
                 }}
               />
@@ -51,11 +47,7 @@ export default function RadioInput({
                     xs: 1.2,
                     lg: 2,
                   },
-                  fontSize: {
-                    xs: 25,
-                    md: 28,
-                    lg: 40,
-                  },
+                  fontSize: 40,
                   fontWeight: 700,
                   textAlign: "left",
                 },
