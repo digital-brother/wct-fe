@@ -20,7 +20,7 @@ export default function LandingWelcome() {
         }}>Welcome to a Whole New World of Personalised Health & Wellness</span>
       </Box>
       <Box>
-        <Box style={{display: "flex", justifyContent: "space-around", backgroundColor: "#CDD1E3", height: "450px", marginBottom: "50px"}}>
+        <Box style={{display: "flex", justifyContent: "space-around", backgroundColor: "#CDD1E3", height: "470px", marginBottom: "50px"}}>
           <Box style={{display: "flex", flexDirection: "column", padding: "10px", backgroundColor: "#C5CADE", width: "60%", alignItems: "center"}}>
             <Image
               src={gupta}

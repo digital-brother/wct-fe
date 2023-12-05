@@ -9,6 +9,7 @@ import LandingHowItWorks from "@/app/landing/landing-howitworks";
 import LandingPremiumQuality from "@/app/landing/landing-premiumquality";
 import LandingSatisfiedSupplement from "@/app/landing/landing-satisfiedsupplement";
 import LandingPersonalizedPlans from "@/app/landing/landing-personalizedplans";
+import LandingRecentBlog from "@/app/landing/landing-recentblog";
 
 export default function HomePage() {
     return (
@@ -23,6 +24,7 @@ export default function HomePage() {
             <LandingPremiumQuality/>
             <LandingSatisfiedSupplement/>
             <LandingPersonalizedPlans/>
+            <LandingRecentBlog/>
         </Box>
     );
 }
