@@ -1,13 +1,13 @@
-import {FormControlLabel, Grid, Typography} from "@mui/material";
+import { FormControlLabel, Grid, Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import * as React from "react";
-import {useRef, useState} from "react";
+import { useRef, useState } from "react";
 import Box from "@mui/material/Box";
-import {BooleanButton} from "@/app/quiz/components/BooleanInput";
+import { BooleanButton } from "@/app/quiz/components/BooleanInput";
 
-const CHOICES_FIELD_NAME = 'choices'
+const CHOICES_FIELD_NAME = "choices";
 
-export function Choice({choice}) {
+export function Choice({ choice }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (event) => {
@@ -36,31 +36,36 @@ export function Choice({choice}) {
         justifyContent: "center",
       }}
     />
-  )
+  );
 }
 
-export default function CheckboxInput({question, handleAnswerSubmit}) {
+export default function CheckboxInput({ question, handleAnswerSubmit }) {
   const formRef = useRef(null);
-  const choices = question.choices.slice(0, 5)
+  const choices = question.choices;
 
   const handleSubmit = () => {
     const formData = new FormData(formRef.current);
-    const selectedChoices = formData.getAll(CHOICES_FIELD_NAME)
-    handleAnswerSubmit({choice: selectedChoices[0]})
+    const selectedChoices = formData.getAll(CHOICES_FIELD_NAME);
+    handleAnswerSubmit({ choices: selectedChoices });
   };
 
   return (
-    <Box component={"form"} ref={formRef} sx={{mt: 5}}>
-      <Grid container rowSpacing={1} columnSpacing={2} sx={{textAlign: "center"}}>
-        {choices.map((choice) => (
-          <Grid item xs={6}>
-            <Choice choice={choice}/>
+    <Box component={"form"} ref={formRef} sx={{ mt: 5 }}>
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={2}
+        sx={{ textAlign: "center" }}
+      >
+        {choices.map((choice, index) => (
+          <Grid key={index} item xs={6}>
+            <Choice choice={choice} />
           </Grid>
         ))}
       </Grid>
-      <BooleanButton onClick={handleSubmit} sx={{mt: 5}}>
+      <BooleanButton onClick={handleSubmit} sx={{ mt: 5 }}>
         Submit
       </BooleanButton>
     </Box>
-  )
+  );
 }
