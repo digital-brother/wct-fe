@@ -1,35 +1,35 @@
-import {Roboto} from 'next/font/google';
-import {createTheme} from '@mui/material/styles';
+import { Lora } from "next/font/google";
+import { createTheme } from "@mui/material/styles";
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+const lora = Lora({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
     quiz: {
-      backgroundColor: '#f9f4ee',
+      backgroundColor: "#FFF8EF",
       button: {
-        backgroundColor: '#fbf5ef',
+        backgroundColor: "#fbf5ef",
       },
       container: {
-        backgroundColor: '#f3e4dc',
-        borderColor: '#f7eee9',
-      }
+        backgroundColor: "#F1E4DB",
+        borderColor: "#FFFFFF",
+      },
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: lora.style.fontFamily,
   },
   components: {
     MuiAlert: {
       styleOverrides: {
-        root: ({ownerState}) => ({
-          ...(ownerState.severity === 'info' && {
-            backgroundColor: '#60a5fa',
+        root: ({ ownerState }) => ({
+          ...(ownerState.severity === "info" && {
+            backgroundColor: "#60a5fa",
           }),
         }),
       },
